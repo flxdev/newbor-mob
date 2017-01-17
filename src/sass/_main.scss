@@ -17,6 +17,7 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	height: 100%;
+	transition: all 1s ease-out 0.5s;
 }
 h1,h2,h3,h4,h5,ul,p,ol,input,textarea,a {
 	margin: 0;
@@ -394,10 +395,12 @@ ul { list-style-type: none; }
 .read-other__close {
 	display: none;
 	opacity: 0;
+	transition: all 3s ease;
 }
 .read-other__open {
 	display: block;
 	opacity: 1;
+	transition: all 3s ease;
 }
 
 

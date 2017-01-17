@@ -19,9 +19,12 @@ $(document).ready(function() {
 		$('.menu_mobile').toggleClass('menu_mobile-close');
 		$('body').toggleClass('overflow-hidden');
 	});
-	
+
 	$('#transport').on('click', function() {
 		dropLinks('#transport_open', 'read-other__open')
+	});
+	$('#auto').on('click', function() {
+		dropLinks('#auto_open', 'read-other__open')
 	});
 });
 
