@@ -1,9 +1,10 @@
 
 include _slide_oneSlide
 include _slide_twoSlide
+include _slide_treeSlide
 mixin slider(arrows, dots, slidesToShow, slidesToScroll, allSlides, type)
 	
-	-var str = '{"slidesToShow":'+slidesToShow+', "slidesToScroll":'+slidesToScroll+', "dots":"'+dots+'", "arrows":"'+arrows+'"}'
+	-var str = '{"slidesToShow":'+slidesToShow+', "slidesToScroll":'+slidesToScroll+', "arrows":"'+arrows+'"}'
 	-if (type == 1) 
 		div.slider-init.slider-custom1(data-slick=str)
 			- for (var i = 0; i < allSlides.length; i++) 
@@ -12,8 +13,7 @@ mixin slider(arrows, dots, slidesToShow, slidesToScroll, allSlides, type)
 		div.slider-init.slider-custom2(data-slick=str)
 			- for (var i = 0; i < allSlides.length; i++) 
 				+slide_2(allSlides[i].img, allSlides[i].text, allSlides[i].date)
-				
-			
-	
-
-
+	-if (type == 3) 
+		div.slider-init.slider-custom2.slider-custom3(data-slick=str)
+			- for (var i = 0; i < allSlides.length; i++) 
+				+slide_3(allSlides[i].img, allSlides[i].text, allSlides[i].date)

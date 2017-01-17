@@ -1,0 +1,121 @@
+/* VARIABLES */
+
+$background:         darken(desaturate(#FF3300,40%), 10%);
+
+$burgerwidth:        40px;
+$burgercolor:        #fff;
+$transition:         all .25s ease-in-out 0.2s;
+$centerdelay:        0s;
+
+// Do not adjust variables below
+$burgerheight:       $burgerwidth - $burgerwidth/5;
+$burgerline:         $burgerwidth/10;
+$burgerchecktop:     $burgerwidth/3.3;
+$burgercheckbottom:  -$burgerwidth/3.3;
+$burgermargin:       $burgerline/0.5 0;
+
+/* END OF VARIABLES */
+$break:         768px;
+
+.twitter {
+  background-color: white;
+  float: right;
+  padding: 15px;
+  position: relative;
+  transition: $transition;
+  
+  a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  
+  span, i {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    transition: $transition;
+  }
+  
+  i {
+    margin: 0 0 0 5px;
+  }
+  
+  &:hover {
+    background-color: black;
+    
+    span, i {
+      color: white;
+    }
+  }
+}
+
+input:checked {
+  ~ label {
+    span {
+
+      &:nth-child(2) {
+        opacity: 0;
+        //height: 0;
+        //width: 0;
+        margin-left:-100vw;
+        //background-color: red;
+        transition-delay: $centerdelay;
+        transition-speed: 0.5s;
+      }
+      &:nth-child(1) {        
+        transform: rotate(405deg);
+        top: $burgerchecktop;
+      }
+      &:nth-child(3) {
+        transform: rotate(-405deg);
+        top: $burgercheckbottom;
+      }
+
+    } 
+  }
+  ~ ul {
+    //display: table;
+  }
+}
+
+label.hamburger {
+  display: inline-block;
+  padding: 0;
+  height: $burgerheight;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  
+  @media screen and (min-width: $break) {
+    //display: none;
+  }
+  
+  span {
+    content: "";
+    width: $burgerwidth;
+    height: $burgerline;
+    background-color: #000;
+    display: block;
+    margin: 0;
+    transition: $transition;
+    opacity: 1;
+    position: relative;
+    top: 0;
+    
+    &:nth-of-type(2) {
+      margin: $burgermargin;
+      //transition: none;
+    }
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}

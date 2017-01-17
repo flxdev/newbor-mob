@@ -1,5 +1,11 @@
 header.header
-	img.header__logo
+	img.header__logo(src='img/logo.png')
 	p.header__text +375 29 000 00 00
+
 	div.header__menu
-		img(src='img/svg/uEA0A-menu.svg')
+		input(type="checkbox" id="hamburger" hidden="hidden")
+		label(for="hamburger" class="hamburger" id="menu")
+			span
+			span
+			span
+
