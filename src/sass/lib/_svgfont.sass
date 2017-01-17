@@ -1,0 +1,62 @@
+@font-face
+	font-family: "svgfont"
+	src: url('fonts/svgfont.eot')
+	src: url('fonts/svgfont.eot?#iefix') format('eot'), url('fonts/svgfont.woff') format('woff'), url('fonts/svgfont.woff2') format('woff2'), url('fonts/svgfont.ttf') format('truetype')
+	font-weight: normal
+	font-style: normal
+
+$icon-arrow 1 left: "\EA01"
+$icon-arrow 1 right: "\EA02"
+$icon-close: "\EA03"
+$icon-f: "\EA04"
+$icon-filters: "\EA05"
+$icon-round: "\EA06"
+$icon-vk: "\EA07"
+$icon-youtube: "\EA08"
+$icon-infra: "\EA09"
+$icon-menu: "\EA0A"
+$icon-place: "\EA0B"
+$icon-design: "\EA0C"
+$icon-ecologi: "\EA0D"
+
+
+%icon
+	font-family: "svgfont"
+	font-style: normal
+	font-weight: normal
+	text-rendering: auto
+	speak: none
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.icon, [class^="icon-"], [class*=" icon-"]
+	@extend %icon
+	display: inline-block
+
+.icon-arrow 1 left:before
+	content: $icon-arrow 1 left
+.icon-arrow 1 right:before
+	content: $icon-arrow 1 right
+.icon-close:before
+	content: $icon-close
+.icon-f:before
+	content: $icon-f
+.icon-filters:before
+	content: $icon-filters
+.icon-round:before
+	content: $icon-round
+.icon-vk:before
+	content: $icon-vk
+.icon-youtube:before
+	content: $icon-youtube
+.icon-infra:before
+	content: $icon-infra
+.icon-menu:before
+	content: $icon-menu
+.icon-place:before
+	content: $icon-place
+.icon-design:before
+	content: $icon-design
+.icon-ecologi:before
+	content: $icon-ecologi
