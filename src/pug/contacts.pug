@@ -1,0 +1,68 @@
+extends _layout
+
+block title
+	title Title of template
+
+block content
+	include includes/_sliders
+	include includes/_btn
+	include includes/_menu
+
+
+	include includes/_header
+	nav.title-breadcrumbs
+		ul.breadcrumbs
+			li 
+				a Главная /
+	section.title-map_and_contact
+		div.sales-dep
+			h3.sales-dep_title Отдел продаж
+			div.block-contact
+				ul
+					li Адрес
+					li ул. Леонардо Да Винчи, 2
+					li д. Копище, Минский р-н
+				ul
+					li Телефоны
+					li +375 29 300-00-00
+					li +375 29 300-00-00
+					li +375 29 300-00-00
+				ul
+					li Режим работы
+					li ПН...ПТ 8:30 &mdash; 20:00
+					li CБ, BC 10:00 &mdash; 16:00
+		div.map
+			div(id="map" style="width: 100%; height: 400px; margin-bottom: 30px;")
+			+btn('btn-green_border btn-uppercase', 'построить маршрут')
+	
+	section.how_search
+		div.how_to_get
+			p Как добраться
+			div.accordion
+				div.accordion-item
+					div#transport
+						span.read-other.read-other_black Общественный транспорт
+					div.read-other__close#transport-open
+						h3 Автобусы, Троллейбусы
+						p 34 3643 783742
+				.accordion-item
+					div#auto 
+						span.read-other.read-other_black Автомобиль
+					div.read-other__close#auto-open
+						h3 Автобусы, Троллейбусы
+						p 34 3643 783742
+	
+	include includes/_link_back
+	include includes/_footer
+	
+
+
+
+	
+
+
+
+
+
+
+
