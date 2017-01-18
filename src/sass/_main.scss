@@ -352,7 +352,7 @@
 }
 
 
-//links
+//links drop
 .read-other {
 	font-size: 2.5rem;
 	color: #000;
@@ -375,6 +375,21 @@
 	display: block;
 	opacity: 1;
 	transition: all 3s ease;
+}
+
+//links
+.links {
+	color: $prime-color;
+	text-decoration: none;
+	svg {
+		fill: $prime-color;
+	}
+}
+.links:visited {
+	color: #757e1f;
+	svg {
+		fill: #757e1f;
+	}
 }
 
 

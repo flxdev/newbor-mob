@@ -1,0 +1,54 @@
+extends _layout
+
+block title
+	title Title of template
+
+block content
+	include includes/_sliders
+	include includes/_btn
+	include includes/_menu
+
+	include includes/_header
+	
+	
+	nav.title-breadcrumbs
+		ul.breadcrumbs
+			li 
+				a Главная /
+
+	section.title-loyalty_text
+		div.wrapp_loyalty_text.__margin-20
+			h3 Программа лояльности
+			img(src='img/banner_loyalty.jpg' alt='Программа лояльности')
+			p Каждый покупатель квартиры в Новой Боровой становится обладателем «Карты жителя», которая предоставляет уникальную возможность получать скидки и специальные условия на товары и услуги наших партнеров. Подробная информация об условиях сотрудничества и актуальный список участников программы всегда доступны на этой странице. Список наших партнеров постоянно будет увеличиваться. Следите за нашими новостями.
+	section.title-loyalty_list
+		mixin loyalty(name,link,sale,note)
+			li
+				div
+					p #{name}
+					a.links(href=link target='_blank') #{link}
+				div
+					p #{sale}
+					p.note #{note}
+		div.wrapp_loyalty_list.__margin-20
+			h4 Список участников
+			ul
+				+loyalty('Кухни Зов','www.zov-minsk.by','5%','(Скидка суммируется с другими скидками продавца)')
+				+loyalty('Папа карло (мебель своими руками и ногами)','www.papakarlo.by','15%-20%','')
+				+loyalty('Кухни Зов','www.zov-minsk.by','5%','')
+
+
+	include includes/_link_back
+	include includes/_footer
+	
+
+
+
+	
+
+
+
+
+
+
+
