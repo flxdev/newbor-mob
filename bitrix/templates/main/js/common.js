@@ -1,4 +1,9 @@
 $(document).ready(function() {
+
+	//init map
+	ymaps.ready(initYandexMap);
+
+	//init slider
 	$('.slider-init').slick({
 		dots: true,
 		arrows: true,
@@ -15,21 +20,34 @@ $(document).ready(function() {
 		]		
 	});
 
+
 	$('#menu').on('click', function() {
 		$('.menu_mobile').toggleClass('menu_mobile-close');
 		$('body').toggleClass('overflow-hidden');
 	});
 
 	$('#transport').on('click', function() {
-		dropLinks('#transport_open', 'read-other__open')
+		dropLinks('#transport-open', 'read-other__open')
 	});
 	$('#auto').on('click', function() {
-		dropLinks('#auto_open', 'read-other__open')
+		dropLinks('#auto-open', 'read-other__open')
 	});
+	$('#work_list').on('click', function() {
+		dropLinks('#work_list-open', 'read-other__open')
+	});
+
 });
 
 function dropLinks(click, toggleClass)  {
 	$(click).toggleClass(toggleClass);
+}
+
+function initYandexMap(){     
+    var myMap;
+    myMap = new ymaps.Map("map", {
+        center: [55.76, 37.64],
+        zoom: 7
+    });
 }
 
 

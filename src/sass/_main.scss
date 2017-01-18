@@ -1,43 +1,3 @@
-html {
-	font-size: $font_size;
-	height: 100%;
-}
-body {
-  	font-family: $font_m;
-  	font-weight: 500;
-  	min-width: 320px;
-  	max-width: 1024px;
-  	position: relative;
-  	line-height: 1.6;
-  	background-color: #f4f4f4;
-	padding: 0;
-	margin: 0;
-	display: flex;
-	flex-flow: column no-wrap;
-	justify-content: flex-start;
-	align-items: center;
-	height: 100%;
-	transition: all 1s ease-out 0.5s;
-}
-h1,h2,h3,h4,h5,ul,p,ol,input,textarea,a {
-	margin: 0;
-	padding:0;
-	font-weight: 500;
-	outline: none;
-	font-family: 'pf_regular', sans-serif;
-}
-h1 { font-size: 6rem; font-family: $font_m}
-h2 { font-size: 4.5rem; font-family: $font_m}
-h3 { font-size: 3.1rem; font-family: $font_m }
-h4 { font-size: 2.7rem; font-family: $font_m }
-p,li { font-size: 2rem;  font-family: $font_r}
-ul { list-style-type: none; }
-.overflow-hidden {
-	overflow: hidden;
-} 
-.out {
-	width: 100%;
-}
 .header {
 	display: flex;
 	flex-direction: row;
@@ -144,6 +104,9 @@ ul { list-style-type: none; }
 	    right: 20px;
 	    top: 0;
 	    z-index: 1;
+	}
+	.slick-dots {
+		display: block !important;
 	}
 }
 
@@ -259,7 +222,6 @@ ul { list-style-type: none; }
     margin: 10px 0 20px 0;
 }
 .about-work_list {
-    margin: 0 0 30px;
 	li {
 		margin: 15px 0;
 	}
@@ -377,10 +339,25 @@ ul { list-style-type: none; }
 	background-color: #000;
 }
 
-//links
+// breadcrumbs
+.breadcrumbs {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
 
+	li {
+		
+		a {
+			color: $grey
+		}
+	}
+}
+
+
+//links
 .read-other {
-	font-size: 1.8rem;
+	font-size: 2.5rem;
 	color: #000;
 	border-bottom: 3px dotted #000;
 	font-family: $font_m;
@@ -493,4 +470,4 @@ ul { list-style-type: none; }
     overflow: hidden;
     display: none;
 }
-.menu_mobile-close { display: block;}
+.menu_mobile-close { display: block; }

@@ -1,0 +1,40 @@
+html {
+	font-size: $font_size;
+	height: 100%;
+}
+body {
+  	font-family: $font_m;
+  	font-weight: 500;
+  	min-width: 320px;
+  	max-width: 1024px;
+  	position: relative;
+  	line-height: 1.6;
+  	background-color: #f4f4f4;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-flow: column no-wrap;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100%;
+	transition: all 1s ease-out 0.5s;
+}
+h1,h2,h3,h4,h5,ul,p,ol,input,textarea,a {
+	margin: 0;
+	padding:0;
+	font-weight: 500;
+	outline: none;
+	font-family: 'pf_regular', sans-serif;
+}
+h1 { font-size: 6rem; font-family: $font_m}
+h2 { font-size: 4.5rem; font-family: $font_m}
+h3 { font-size: 3.1rem; font-family: $font_m }
+h4 { font-size: 2.7rem; font-family: $font_m }
+p,li { font-size: 2rem;  font-family: $font_r}
+ul { list-style-type: none; }
+.overflow-hidden {
+	overflow: hidden;
+} 
+.out {
+	width: 100%;
+}

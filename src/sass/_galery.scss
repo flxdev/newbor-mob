@@ -1,0 +1,59 @@
+.logo_quarter {
+	margin: 20px;
+	background-color: $prime-color;
+	text-align: center;
+	img {
+		width: 80%;
+		padding: 60px 0;
+	}
+}
+.breadcrumbs {
+	margin: 20px;
+	li {
+		padding: 10px 5px;
+	}
+}
+.wrapp_foto_galerias {
+	margin: 20px;
+	.foto_none {
+		display: none;
+	}
+	.foto_galerias-h3 {
+		margin: 20px 0;
+	}
+	.foto_galerias-item {
+		margin-bottom: 45px;
+    	width: 48%;
+    	display: inline-block;
+    	img {
+    		width: 100%;
+   			margin-bottom: 15px;
+    	}
+    	.foto_galerias-item-title {
+    		display: inline-block;
+    	}
+    	.foto_galerias-item-descript {
+    		font-size: 2rem;
+    		color: $grey;
+    	}
+	}
+
+	.foto_galerias-item:nth-child(odd) {
+   		margin-right: 10px;
+	}	
+}
+
+.back_link {
+	margin: 30px 20px 70px;
+	a {
+		font-size: 2rem;
+		text-transform: uppercase;
+		color: $prime-color;
+		text-decoration: none;
+		svg {
+			fill: $prime-color;
+			width: 30px;
+			height: 15px;
+		}
+	}
+}
