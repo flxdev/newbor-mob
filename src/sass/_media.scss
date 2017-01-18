@@ -80,5 +80,37 @@
 	.wrapp_foto_galerias .foto_galerias-item {
 		width: 100%;
 	}
+	// --------------
+	// about
+	// --------------
+	.wrapp_about_number {
+		.about_number-list  {
+			li {
+				flex-basis: 100%;
+				padding: 20px 5px;
+				&:first-child, &:last-child {
+					padding: 20px 5px;
+				}
+			}
+
+		}
+	}
+
+	// --------------
+	// house_price
+	// --------------
+	.wrapp-house_price {
+		.house {
+			width: 100%;
+			&:nth-child(odd) {
+				margin-right: 0;
+			}
+			&:nth-child(even) {
+				margin-left: 0;
+			}
+		}
+
+	}
+	
 	
 }

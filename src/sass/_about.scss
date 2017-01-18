@@ -1,0 +1,65 @@
+.wrapp_about_quarter {
+	margin: 40px 20px;
+	.about_quarter-h4 {
+		margin-bottom: 20px;
+	}
+	.about_quarter-h3, .about_quarter-description {
+		margin-bottom: 40px;
+	}
+
+}
+.slider-custom4 {
+	margin: 20px 0;
+	.slider_arrow-next, .slider_arrow-pre {
+		top: 100%;
+		width: 50px;
+		height: 70px;
+	}
+	.slider_arrow-next {
+		right: 0;
+		
+	}
+	.slider_arrow-pre {
+		right: 50px;
+	}
+	.slide__item4 {
+		p {
+			color: $grey;
+			margin: 0 0 18px 0;
+			width: 70%;
+		}
+	}
+}
+.wrapp_about_number {
+	margin: 20px;
+	.about_number-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		margin: 55px 0 80px 0;
+		li {
+			padding: 0 20px;
+			flex-basis: 25%;
+			&:first-child {
+				padding-left:0; 
+			}
+			&:last-child {
+				padding-right:0; 
+			}
+		}
+	}
+}
+
+.wrapp_about_text {
+	margin: 20px;
+	p {
+		margin: 25px 0;
+	}
+	img {
+		width: 100%;
+		margin: 25px 0;
+	}
+}
+

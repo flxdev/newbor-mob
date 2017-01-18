@@ -1,19 +1,39 @@
-
-include _slide_oneSlide
-include _slide_twoSlide
-include _slide_treeSlide
 mixin slider(arrows, dots, slidesToShow, slidesToScroll, allSlides, type)
 	
 	-var str = '{"slidesToShow":'+slidesToShow+', "slidesToScroll":'+slidesToScroll+', "arrows":"'+arrows+'"}'
 	-if (type == 1) 
 		div.slider-init.slider-custom1(data-slick=str)
-			- for (var i = 0; i < allSlides.length; i++) 
-				+slide_1(allSlides[i].img, allSlides[i].text)
+			- for (var i = 0; i < allSlides.length; i++) {
+				div.slide__item
+					img(src=allSlides[i].img)
+					h2=	allSlides[i].text
+			-}
 	-if (type == 2) 
 		div.slider-init.slider-custom2(data-slick=str)
-			- for (var i = 0; i < allSlides.length; i++) 
-				+slide_2(allSlides[i].img, allSlides[i].text, allSlides[i].date)
+			- for (var i = 0; i < allSlides.length; i++) {
+				div.slide__item2
+					img(src=allSlides[i].img)
+					p= allSlides[i].date 
+					h4=	allSlides[i].text
+			-}
+				
 	-if (type == 3) 
 		div.slider-init.slider-custom2.slider-custom3(data-slick=str)
-			- for (var i = 0; i < allSlides.length; i++) 
-				+slide_3(allSlides[i].img, allSlides[i].text, allSlides[i].date)
+			- for (var i = 0; i < allSlides.length; i++) {
+				div.slide__item2
+					h4=	allSlides[i].text
+					p= allSlides[i].date 
+					img(src=allSlides[i].img)
+			-}
+	-if (type == 4) {
+		div.slider-init-2_1.slider-custom2.slider-custom4(data-slick=str)
+			- for (var i = 0; i < allSlides.length; i++) {
+				div.slide__item4
+					img(src=allSlides[i].img)
+			-}
+		div.slider-init-2_2.slider-custom2.slider-custom4(data-slick=str)
+			- for (var i = 0; i < allSlides.length; i++) {
+				div.slide__item4
+					p= allSlides[i].text 
+			-}
+	-}

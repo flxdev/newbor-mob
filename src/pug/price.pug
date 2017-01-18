@@ -18,26 +18,27 @@ block content
 			li 
 				a Главная /
 
-	mixin foto(id)
-		div.foto_galerias-item
-			//- Титулная фотка
-			-var id_g = 'gallery'+id
-			a(data-fancybox=id_g href="img/slide2.jpg" data-options='{"infobar" : "false", "buttons" : "false"}')
+	section.title-price_contact
+		div.wrapp_price_contact.__margin-20
+			h4 Цены и условия
+			p Уважаемые клиенты, подробную информацию о стоимости, наличии квартир и условиях покупки вы можете узнать по телефонам колл-центра:
+			ul
+				li +375 29 300-00-00 
+				li +375 29 1-328-328
+				li +375 29 555-000-0
+	section.title-price_house
+		mixin house
+			div.house
+				h4.house-title Дом 6
+				p.house-descript.no_margin (9.6 по генплану), 19 этажей
+				p.house-descript Срок сдачи: сдан в 1 квартале 2016 
 				img(src="img/slide2.jpg" alt="alt")
-			//- Остальная галерея должна иметь класс .foto_none
-			-for (var i = 0; i < 5; i++){
-				a.foto_none(data-fancybox=id_g href="img/slide2.jpg" data-options='{"infobar" : "false", "buttons" : "false"}')
-					img(src="img/slide2.jpg" alt="alt")
-			-}
-			h4.foto_galerias-item-title Ноябрь 2016 /
-			span.foto_galerias-item-descript 10 фото
+				+btn('btn-green btn-uppercase btn-center', 'подобрать по параметрам')
+		div.wrapp-house.__margin-20.wrapp-house_price
+			+house
+			+house
+			+house
 	
-	section.title-foto_galerias 
-		div.wrapp_foto_galerias
-			h3.foto_galerias-h3 Фотогалерея
-			-for(var i = 0; i<5; i++)
-				+foto(i+1)
-
 	section.title-back_link
 		div.back_link
 			a(href = '/') 

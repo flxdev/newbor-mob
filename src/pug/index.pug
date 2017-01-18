@@ -41,16 +41,17 @@ block content
 				img(src="img/slide2.jpg" alt="alt")
 				+btn('btn-green btn-uppercase btn-center', 'подобрать по параметрам')
 		div.tabs-content
-			h3 Кедровы квартал
-			p.
-				Кедровый &mdash; первый из 11 кварталов Новой Боровой. На сегодняшний день построено 3 дома.	
-			div.wrapp-house.wrapp-house__ipad
-				+house
-				+house
-				+house
-			div.wrapp-house.wrapp-house__iphone
-				-var slider_3 = [{ date: '(9.6 по генплану), 19 этажей', img: 'img/slide2.jpg', text: 'Дом 6'}, { date: '(9.6 по генплану), 19 этажей', img: 'img/slide2.jpg', text: 'Дом 6'},{ date: '(9.6 по генплану), 19 этажей', img: 'img/slide2.jpg', text: 'Дом 6'} ]
-				+slider("false", "true", 1, 1, slider_3, 3)
+			div.tab-kedr
+				h3 Кедровы квартал
+				p.
+					Кедровый &mdash; первый из 11 кварталов Новой Боровой. На сегодняшний день построено 3 дома.	
+				div.wrapp-house.wrapp-house__ipad
+					+house
+					+house
+					+house
+				div.wrapp-house.wrapp-house__iphone
+					-var slider_3 = [{ date: '(9.6 по генплану), 19 этажей', img: 'img/slide2.jpg', text: 'Дом 6'}, { date: '(9.6 по генплану), 19 этажей', img: 'img/slide2.jpg', text: 'Дом 6'},{ date: '(9.6 по генплану), 19 этажей', img: 'img/slide2.jpg', text: 'Дом 6'} ]
+					+slider("false", "true", 1, 1, slider_3, 3)
 
 	section.title-news
 		h3.new-title Новости 
