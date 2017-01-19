@@ -1,0 +1,30 @@
+//news
+.wrapp-news {
+	.news-fix_margin {
+		&:nth-child(odd){
+			margin: 0 0 40px 0;
+			padding-right: 10px;
+		}
+		&:nth-child(even){
+			margin: 0 0 40px 0;
+			padding-left: 10px;
+		}
+	}
+}
+.news_title {
+	margin-bottom: 30px;
+}
+
+
+//one_news
+.wrapp_news_one {
+	.news_one__img {
+		width: 100%
+	}
+	.margin__top-bottom {
+		margin: 15px 0;
+	}
+	.no_margin__bottom {
+		margin-bottom: 0;
+	}
+}

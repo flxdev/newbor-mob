@@ -177,15 +177,23 @@
 	margin: 20px;
 }
 .wrapp-house__ipad {
-	display: block;
+	display: flex;
 }
 .wrapp-house__iphone {
 	display: none;
 }
+.wrapp-house {
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
 .house  {
 	margin-top: 45px;
-	width: 48%;
-	display: inline-block;
+	// width: 48%;
+	// display: inline-block;
+	flex-basis: 49%;
 	.house-descript {
 		color: #858585;
 		margin-bottom: 10px;
@@ -406,6 +414,15 @@
 		content: '\2014';
 		position: relative;
    	 	left: -5px;
+	}
+}
+.list-first_item  {
+	li:first-child {
+		padding-left: 0;
+	}
+	li:first-child::before {
+		content: '';
+		left: 0;
 	}
 }
 //end list

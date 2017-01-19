@@ -1,0 +1,51 @@
+extends _layout
+
+block title
+	title Title of template
+
+block content
+	include includes/_sliders
+	include includes/_btn
+	include includes/_menu
+
+	include includes/_header
+	
+	nav.title-breadcrumbs
+		ul.breadcrumbs
+			li 
+				a Главная /
+			li 
+				a Новсти и акции /
+
+	section.title-news_shares_one
+		div.wrapp_news_one.__margin-20
+			h3.news_one__title.margin__top-bottom От 17,5% на 20 лет: уникальный кредит на жилье в НБ
+			img.news_one__img.margin__top-bottom(src='img/new_borovaya.jpg')
+			p.margin__top-bottom Новые специальные кредитные условия на квартиры в Новой Боровой – от 17,5% в рублях на 20 лет! 
+			p.margin__top-bottom Только для наших покупателей ставка по кредиту — всего от 17,5% годовых в первые два года обслуживания. Такое предложение можно считать действительно уникальным для Беларуси. 
+			ul.list.list-first_item.margin__top-bottom
+				li И это еще не все:
+				li Первоначальный взнос от 20%.
+				li Кредит выдается на срок до 20 лет в белорусских рублях без штрафов за досрочное погашение.
+				li Быстрое рассмотрение заявки на получение кредита.
+				li Можно приобрести любую из доступных квартир. Кредит выдается на готовое и строящееся жилье.
+			p.margin__top-bottom.no_margin__bottom Узнать подробности и рассчитать индивидуальные условия кредита вы можете в нашем офисе продаж.
+			p Приезжайте, мы работаем каждый день! 
+
+
+		
+	
+	include includes/_link_back
+	include includes/_footer
+	
+
+
+
+	
+
+
+
+
+
+
+
