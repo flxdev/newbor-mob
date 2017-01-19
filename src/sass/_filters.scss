@@ -1,0 +1,75 @@
+.wrapp_filters {
+	background-color: $prime-color;
+	margin: 20px;
+	padding: 50px 60px;
+	color: #fff;
+	.filters-h3 {
+		text-align: center;
+	}
+	.tabs {
+		margin: 30px 0;
+	}
+	.tabs-content_filters {
+		margin: 0 0 70px 0;
+		.tabs-fast, .tabs-deployed {
+			.tabs-fast_list {
+				.tabs-fast_list_item {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					padding: 25px 0;
+					.filter-text {
+						flex-basis: 32%;
+						padding-left: 10px;
+						.filter-text_main{
+
+						}
+						.filter-text_secondary {
+							color: #000;
+							input {
+								background-color: rgba(0,0,0,0);
+								font-size: 1.5rem;
+							}
+						}
+					}
+					.filter-value {
+						flex-basis: 65%;
+						padding-right: 10px;
+					}
+				}
+			}
+			.btn {
+				margin: 50px auto 20px;
+			}
+			.link_reset {
+				color: #757e1f;
+    			text-align: center;
+   				font-size: 1.7rem;
+			}
+		}
+		.tabs-deployed {
+
+		}
+		.tabs-fast {
+
+		}
+	}
+}
+
+
+input[type=checkbox] {
+	display: none;
+}
+label.checkbox-custom {
+	background-color: rgba(0,0,0,0);
+	border-radius: 50%;
+	color: #757e1f;
+	padding: 12px 21px;
+    font-family: pf_medium;
+    margin-right: 5%;
+    font-size: 2.5rem;
+}
+input[type=checkbox]:checked + label.checkbox-custom {
+	background-color: #fff;
+}

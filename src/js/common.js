@@ -1,9 +1,7 @@
 $(document).ready(function() {
 
-	//init map
-	
+//init slick slider
 
-	//init slider
 	$('.slider-init').slick({
 		dots: true,
 		arrows: true,
@@ -19,6 +17,8 @@ $(document).ready(function() {
 			}
 		]		
 	});
+
+//init slick double slider
 
 	$('.slider-init-2_1').slick({
 		slidesToShow: 1,
@@ -39,11 +39,51 @@ $(document).ready(function() {
 		fade: true
 	});
 
+//script init draggable sliderUI
+
+	$(".js_ui_slider").draggable();
+
+//script init sliderUi
+
+	initSlidersUi();
+
+//script init selectUi
+
+	initSelectUi();
+
+//script swich tabs
+
+	$('.js_tab').on('click', function(e) {
+		var clickTab = $(this).data('tab');
+		$('.js_tab').each(function() {
+			if( $(this).data('tab') == clickTab ){
+				$(this).addClass('btn-white');
+				$(this).removeClass('btn-white_white-border');
+			}
+			else {
+				$(this).removeClass('btn-white');
+				$(this).addClass('btn-white_white-border');
+			}
+		});
+		$('.tabs-content_filters').find('.js_tab_item').each(function() {
+			if( $(this).data('tab-container') != clickTab ){
+				$(this).addClass('hidden');
+			}
+			else {
+				$(this).removeClass('hidden');
+			}
+		});
+	});
+
+
+//srcript open/close menu
 
 	$('#menu').on('click', function() {
 		$('.menu_mobile').toggleClass('menu_mobile-close');
 		$('body').toggleClass('overflow-hidden');
 	});
+
+//scripts open/close dropdown text
 
 	$('#transport').on('click', function() {
 		dropLinks('#transport-open', 'read-other__open')
@@ -54,21 +94,62 @@ $(document).ready(function() {
 	$('#work_list').on('click', function() {
 		dropLinks('#work_list-open', 'read-other__open')
 	});
-	ymaps.ready(initYandexMap);
+
+//init map
+
+	// ymaps.ready(initYandexMap);
 });
 
-function dropLinks(click, toggleClass)  {
-	$(click).toggleClass(toggleClass);
-}
+	function dropLinks(click, toggleClass)  {
+		$(click).toggleClass(toggleClass);
+	}
 
-function initYandexMap(){     
-    var myMap;
-    myMap = new ymaps.Map("map", {
-        center: [55.76, 37.64],
-        zoom: 7
-    });
-}
+//init map function
 
+	function initYandexMap(){     
+	    var myMap;
+	    myMap = new ymaps.Map("map", {
+	        center: [55.76, 37.64],
+	        zoom: 7
+	    });
+	}
+
+//init sliderUi function
+
+	function initSlidersUi() {
+		$('.js_ui_slider').each(function () {
+			var __parent = $(this.parentNode.parentNode).find('.filter-text_secondary')[0];
+			var slider = $(this).find('.js_ui_slider_main');
+			var sliderSetting = {};
+			sliderSetting.max = $(this).data("max");
+			sliderSetting.min = $(this).data("min");
+			sliderSetting.step = $(this).data("step");
+			sliderSetting.defaultValueTo = $(this).data("default-value-to");
+			sliderSetting.defaultValueFrom = $(this).data("default-value-from");
+			sliderSetting.labelTo = $(this).find('.js_ui_slider_label');
+			sliderSetting.inputHidden = $(this).find('.js_ui_slider_input');
+			$(sliderSetting.inputHidden).val( sliderSetting.defaultValueTo + " - " + sliderSetting.defaultValueFrom );
+			slider.slider({
+				range: true,
+				min: sliderSetting.min,
+				max: sliderSetting.max,
+				step: sliderSetting.step,
+				values: [ sliderSetting.defaultValueTo, sliderSetting.defaultValueFrom ],
+				slide: function( event, ui ) {
+					$(sliderSetting.inputHidden).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+				}
+			});
+				
+		   });
+	}
+
+//init selectUi function
+
+	function initSelectUi() {
+		$('.selectUi').each(function () {
+			$(this).selectmenu();
+		});
+	}
 
 
 
