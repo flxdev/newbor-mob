@@ -52,7 +52,7 @@
       </header>
       <seciton class="title-filters">
         <div class="wrapp_filters">
-          <h3 class="filters-h3">Подборка квартиры по параметрам</h3><img>
+          <h3 class="filters-h3">Подборка квартиры <span> по параметрам </span></h3><img>
           <div class="tabs"><a src="">
                     <button class="btn btn-white btn-tab_left js_tab" data-tab="tab1">Быстрый</button></a><a src="">
                     <button class="btn btn-white_white-border btn-tab_right js_tab" data-tab="tab2">Развернутый</button></a>
@@ -94,12 +94,8 @@
                     </div>
                     <div class="filter-value">
                       <select class="selectUi" name="select">
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
+                        <option>С отделкой</option>
+                        <option>Без отделки</option>
                       </select>
                     </div>
                   </li>
@@ -113,7 +109,19 @@
                 <ul class="tabs-fast_list">
                   <li class="tabs-fast_list_item js_ui_slider" data-min="0" data-max="1000" data-step="10" data-default-value-to="100" data-default-value-from="500">
                     <div class="filter-text">
-                      <p class="filter-text_main">Стоимость, тыс $</p>
+                      <p class="filter-text_main">Площадь, м <sup>2</sup></p>
+                      <p class="filter-text_secondary">
+                        <label class="js_ui_slider_label"></label>
+                        <input class="js_ui_slider_input" type="text" disabled>
+                      </p>
+                    </div>
+                    <div class="filter-value">
+                      <div class="js_ui_slider_main"></div>
+                    </div>
+                  </li>
+                  <li class="tabs-fast_list_item js_ui_slider" data-min="0" data-max="1000" data-step="10" data-default-value-to="100" data-default-value-from="500">
+                    <div class="filter-text">
+                      <p class="filter-text_main">Жилая площадь, м <sup>2</sup></p>
                       <p class="filter-text_secondary">
                         <label class="js_ui_slider_label"></label>
                         <input class="js_ui_slider_input" type="text" disabled>
@@ -137,19 +145,7 @@
                   </li>
                   <li class="tabs-fast_list_item js_ui_slider" data-min="0" data-max="1000" data-step="10" data-default-value-to="100" data-default-value-from="500">
                     <div class="filter-text">
-                      <p class="filter-text_main">Стоимость, тыс $</p>
-                      <p class="filter-text_secondary">
-                        <label class="js_ui_slider_label"></label>
-                        <input class="js_ui_slider_input" type="text" disabled>
-                      </p>
-                    </div>
-                    <div class="filter-value">
-                      <div class="js_ui_slider_main"></div>
-                    </div>
-                  </li>
-                  <li class="tabs-fast_list_item js_ui_slider" data-min="0" data-max="1000" data-step="10" data-default-value-to="100" data-default-value-from="500">
-                    <div class="filter-text">
-                      <p class="filter-text_main">Стоимость, тыс $</p>
+                      <p class="filter-text_main">Цена $/м <sup>2</sup></p>
                       <p class="filter-text_secondary">
                         <label class="js_ui_slider_label"></label>
                         <input class="js_ui_slider_input" type="text" disabled>
@@ -161,46 +157,39 @@
                   </li>
                   <li class="tabs-fast_list_item">
                     <div class="filter-text">
-                      <p class="filter-text_main">Дополнительно</p>
+                      <p class="filter-text_main">Квартал</p>
                     </div>
                     <div class="filter-value">
                       <select class="selectUi" name="select">
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
+                        <option>Все</option>
+                        <option>Кедровый</option>
+                        <option>Сосновый</option>
                       </select>
                     </div>
                   </li>
                   <li class="tabs-fast_list_item">
                     <div class="filter-text">
-                      <p class="filter-text_main">Дополнительно</p>
+                      <p class="filter-text_main">Дом</p>
                     </div>
                     <div class="filter-value">
                       <select class="selectUi" name="select">
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
+                        <option>Все</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
                       </select>
                     </div>
                   </li>
                   <li class="tabs-fast_list_item">
                     <div class="filter-text">
-                      <p class="filter-text_main">Дополнительно</p>
+                      <p class="filter-text_main">Подъезд</p>
                     </div>
                     <div class="filter-value">
                       <select class="selectUi" name="select">
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower		</option>
+                        <option>Все</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
                       </select>
                     </div>
                   </li>
@@ -225,12 +214,10 @@
                     </div>
                     <div class="filter-value">
                       <select class="selectUi" name="select">
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
-                        <option>Slower</option>
+                        <option>Лоджия, отделка, погреб</option>
+                        <option>Лоджия, отделка, погреб</option>
+                        <option>Лоджия, отделка, погреб</option>
+                        <option>Лоджия, отделка, погреб</option>
                       </select>
                     </div>
                   </li>
