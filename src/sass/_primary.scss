@@ -17,7 +17,10 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	height: 100%;
-	transition: all 1s ease-out 0.5s;
+	// transition-property: all;
+	// transition-duration: 2s;
+	// transition-delay: 1s;
+	// transition-timing-function: ease;
 }
 h1,h2,h3,h4,h5,ul,p,ol,input,textarea,a {
 	margin: 0;

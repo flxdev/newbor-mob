@@ -145,7 +145,12 @@ $(document).ready(function() {
 //srcript open/close menu
 
 	$('#menu').on('click', function() {
-		$('.menu_mobile').toggleClass('menu_mobile-close');
+		$('.js_menu_mobile_open').toggleClass('menu_mobile-close');
+		$('body').toggleClass('overflow-hidden');
+	});
+
+	$('.js_form_order').on('click', function() {
+		$('.js_modal_mobile_open').toggleClass('menu_mobile-close');
 		$('body').toggleClass('overflow-hidden');
 	});
 
