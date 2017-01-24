@@ -156,8 +156,8 @@ $(document).ready(function() {
 	initSliderSlick();
 
 //script init draggable sliderUI
-	// $(".js_ui_slider").draggable();
-
+	$(".ui-state-default").draggable(
+		 console.log('123'));
 //script init sliderUi
 	initSlidersUi();
 //script init selectUi
@@ -191,13 +191,17 @@ $(document).ready(function() {
 
 //scripts open/close dropdown text
 	$('#transport').on('click', function() {
-		dropLinks('#transport-open', 'read-other__open')
+		dropLinks('#transport-open', 'read-other__open');
+		console.log($(this).find('.read-other'));
+		$(this).find('.read-other').toggleClass('read-other__svg');
 	});
 	$('#auto').on('click', function() {
-		dropLinks('#auto-open', 'read-other__open')
+		dropLinks('#auto-open', 'read-other__open');
+		$(this).find('.read-other').toggleClass('read-other__svg');
 	});
 	$('#work_list').on('click', function() {
-		dropLinks('#work_list-open', 'read-other__open')
+		dropLinks('#work_list-open', 'read-other__open');
+		$(this).find('.read-other').toggleClass('read-other__svg');
 	});
 	$('#js-title-kedr-menu ').on('click', function() {
 		dropLinks('#js-title-kedr-content', 'links_quarter-drop-open');
@@ -241,5 +245,18 @@ $(document).ready(function() {
 
 		lightGallery(d);
 	});
+
+
+	$('.js-form-reset').on('click', function() {
+		var form = $('form');
+		console.log(form);
+		if (form.length) {
+			form.each(function() {
+				$(this).trigger("reset");
+			});
+		}	
+	});
+	
+	
 
 });

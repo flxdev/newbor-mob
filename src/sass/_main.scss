@@ -433,12 +433,21 @@
 	color: #000;
 	border-bottom: 3px dotted #000;
 	font-family: $font_m;
+	svg {
+		width: 20px;
+       	position: relative;
+    	top: 3px;
+    	margin-left: 10px;
+	}
 }
 .read-other_green {
 	color: $prime-color;
 	border-bottom: 3px dotted $prime-color;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	svg {
+		fill: $prime-color;
+	}
 }
 
 .read-other__close {
@@ -450,6 +459,12 @@
 	display: block;
 	opacity: 1;
 	transition: all 3s ease;
+	
+}
+.read-other__svg {
+	svg {
+		transform: rotate(180deg);
+	}
 }
 
 //links
@@ -721,3 +736,4 @@
 .wrapp-btn {
 	text-align: center;
 }
+
