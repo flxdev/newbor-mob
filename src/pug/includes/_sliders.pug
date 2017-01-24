@@ -1,3 +1,4 @@
+include _a
 mixin slider(arrows, dots, slidesToShow, slidesToScroll, allSlides, type)
 	
 	-var str = '{"slidesToShow":'+slidesToShow+', "slidesToScroll":'+slidesToScroll+', "arrows":"'+arrows+'"}'
@@ -18,12 +19,13 @@ mixin slider(arrows, dots, slidesToShow, slidesToScroll, allSlides, type)
 			-}
 				
 	-if (type == 3) 
-		div.slider-init.slider-custom2.slider-custom3(data-slick=str)
+		div.slider-init.slider-custom2.slider-custom3.slick-dots-none(data-slick=str)
 			- for (var i = 0; i < allSlides.length; i++) {
 				div.slide__item2
 					h4=	allSlides[i].text
 					p= allSlides[i].date 
 					img(src=allSlides[i].img)
+					+a('btn-green btn-uppercase btn-center', 'подобрать по параметрам','#')
 			-}
 	-if (type == 4) {
 		div.slider-init-2_1.slider-custom2.slider-custom4(data-slick=str)

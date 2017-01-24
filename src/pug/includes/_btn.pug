@@ -1,5 +1,4 @@
-mixin btn(className, text, data_tab)
+mixin btn(className, text, data_tab, classAdd, classRemove)
 	-var classBtn = 'btn '+ className;
-	a(src='')
-		button(class=classBtn data-tab=data_tab)= text
+	button(class=classBtn data-tab=data_tab data-add=classAdd data-remove=classRemove)= text
 		

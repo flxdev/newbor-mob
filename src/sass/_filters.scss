@@ -12,6 +12,9 @@
 	.tabs-content_filters {
 		margin: 0 0 70px 0;
 		.tabs-fast, .tabs-deployed {
+			.wrapp-search-btn {
+				text-align: center;
+			}
 			.tabs-fast_list {
 				.tabs-fast_list_item {
 					display: flex;
@@ -114,6 +117,9 @@ input[type=checkbox]:checked + label.checkbox-custom {
 			#group {
 				display: none;
 			}
+			p {
+				padding-top: 10px;
+			}
 		}
 	}
 	.body-resalt {
@@ -167,7 +173,8 @@ input[type=checkbox]:checked + label.checkbox-custom {
 input[type=checkbox] {
 	display: none;
 }
-label.checkbox-custom__check {
+label.checkbox-custom__check:after {
+	content:'';
 	background-color: rgba(0,0,0,0);
 	color: #757e1f;
     font-family: pf_medium;
@@ -183,10 +190,13 @@ label.checkbox-custom__check {
     display: block;
     width: 20px;
     height: 20px;
+    position: absolute;
+    margin-top: -38px;
+    margin-left: -52px;
 }
 
-input[type=checkbox]:checked + label.checkbox-custom__check {
-	background-image: url(../img/icons/no.png);
+input[type=checkbox]:checked + label.checkbox-custom__check:after {
+	background-image: none;
 }
 
 
@@ -205,8 +215,10 @@ input[type=checkbox]:checked + label.checkbox-custom__check {
 		max-width: 100%;
 		margin: 40px 0 70px 0;
 	}
-	.btn {
+	
+	.wrapp-btn  {
 		margin-bottom: 70px;
+		text-align: center;
 	}
 	ul {
 		padding: 0 15%;

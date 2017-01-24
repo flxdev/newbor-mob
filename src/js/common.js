@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 //script init draggable sliderUI
 
-	$(".js_ui_slider").draggable();
+	// $(".js_ui_slider").draggable();
 
 //script init sliderUi
 
@@ -56,16 +56,19 @@ $(document).ready(function() {
 	$('.js_tab').on('click', function(e) {
 		var clickTab = $(this).data('tab');
 		$('.js_tab').each(function() {
+			var switchClass1 = $(this).data('add'),
+				switchClass2 = $(this).data('remove');
+				console.log()
 			if( $(this).data('tab') == clickTab ){
-				$(this).addClass('btn-white');
-				$(this).removeClass('btn-white_white-border');
+				$(this).addClass(switchClass1);
+				$(this).removeClass(switchClass2);
 			}
 			else {
-				$(this).removeClass('btn-white');
-				$(this).addClass('btn-white_white-border');
+				$(this).removeClass(switchClass1);
+				$(this).addClass(switchClass2);
 			}
 		});
-		$('.tabs-content_filters').find('.js_tab_item').each(function() {
+		$('.js-tabs-content').find('.js_tab_item').each(function() {
 			if( $(this).data('tab-container') != clickTab ){
 				$(this).addClass('hidden');
 			}
@@ -78,14 +81,29 @@ $(document).ready(function() {
 
 //srcript open/close menu
 
-	$('#menu').on('click', function() {
+	$('.js-menu-open').on('click', function() {
 		$('.js_menu_mobile_open').toggleClass('menu_mobile-close');
 		$('body').toggleClass('overflow-hidden');
+		dropLinks('#header__menu', 'header__menu-white');
 	});
 
 	$('.js_form_order').on('click', function() {
 		$('.js_modal_mobile_open').toggleClass('menu_mobile-close');
 		$('body').toggleClass('overflow-hidden');
+	});
+
+//srcript open modal advantages 
+
+	$('.js-modal_advantages').on('click', function() {
+		var clickModal = $(this).data('modal-advantages');
+		$('.js-modal-advantages-content').find('.js_modal-advantages_open').each(function() {
+			if( $(this).data('modal-advantages-content') == clickModal ){
+				$(this).toggleClass('menu_mobile-close');
+				$('body').toggleClass('overflow-hidden');
+			}
+		});
+		
+
 	});
 
 //scripts open/close dropdown text
@@ -99,25 +117,51 @@ $(document).ready(function() {
 	$('#work_list').on('click', function() {
 		dropLinks('#work_list-open', 'read-other__open')
 	});
+	$('#js-title-kedr-menu ').on('click', function() {
+		dropLinks('#js-title-kedr-content', 'links_quarter-drop-open');
+	});
 
 //init map
+	if ($('#map').length > 0) ymaps.ready(initYandexMap);
 
-	// ymaps.ready(initYandexMap);
 });
 
 	function dropLinks(click, toggleClass)  {
 		$(click).toggleClass(toggleClass);
+		console.log(click,toggleClass);
 	}
 
 //init map function
 
-	function initYandexMap(){     
+	function initYandexMap(){   
+		var mapSetting = {};
+		mapSetting.centerX = $('#map').data("center-x");
+		mapSetting.centerY = $('#map').data("center-y");
+		mapSetting.zoom = $('#map').data("zoom");
+		mapSetting.markerX = $('#map').data("marker-x");
+		mapSetting.markerY = $('#map').data("marker-y");
+
 	    var myMap;
 	    myMap = new ymaps.Map("map", {
-	        center: [55.76, 37.64],
-	        zoom: 7
+	        center: [mapSetting.centerX,mapSetting.centerY],
+	        zoom: mapSetting.zoom
 	    });
-	}
+	    myPlacemark0 = new ymaps.Placemark([mapSetting.markerX,mapSetting.markerY], {
+        balloonContent: '' 
+			}, {
+			iconImageHref: 'img/map-marker.png', 
+			iconImageSize: [27, 35], 
+			iconImageOffset: [0, 0], 
+			balloonContentSize: [27, 35], 
+			balloonLayout: "default#imageWithContent", 
+			balloonImageHref: 'img/ballon1.png', 
+			balloonImageOffset: [0, 0], 
+			balloonImageSize: [27, 35], 
+			balloonShadow: false
+		}); 
+		myMap.geoObjects
+			.add(myPlacemark0);
+		}
 
 //init sliderUi function
 
@@ -133,7 +177,11 @@ $(document).ready(function() {
 			sliderSetting.defaultValueFrom = $(this).data("default-value-from");
 			sliderSetting.labelTo = $(this).find('.js_ui_slider_label');
 			sliderSetting.inputHidden = $(this).find('.js_ui_slider_input');
+			sliderSetting.inputHiddenTop = $(this).find('.js_ui_slider_value_top');
+			sliderSetting.inputHiddenBottom = $(this).find('.js_ui_slider_value_bottom');
 			$(sliderSetting.inputHidden).val( sliderSetting.defaultValueTo + " - " + sliderSetting.defaultValueFrom );
+			$(sliderSetting.inputHiddenTop).val(sliderSetting.defaultValueFrom);
+			$(sliderSetting.inputHiddenBottom).val(sliderSetting.defaultValueTo);
 			slider.slider({
 				range: true,
 				min: sliderSetting.min,
@@ -142,6 +190,8 @@ $(document).ready(function() {
 				values: [ sliderSetting.defaultValueTo, sliderSetting.defaultValueFrom ],
 				slide: function( event, ui ) {
 					$(sliderSetting.inputHidden).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+					$(sliderSetting.inputHiddenTop).val(ui.values[ 1 ]);
+					$(sliderSetting.inputHiddenBottom).val(ui.values[ 0 ]);
 				}
 			});
 				

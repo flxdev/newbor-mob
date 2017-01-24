@@ -49,6 +49,8 @@
 	}
 	.wrapp-house__iphone {
 		display: block;
+		padding-bottom: 60px;
+    	border-bottom: 1px solid $grey;
 	}
 	.wrapp-advantages .advantages {
 		flex-basis: 49%;
@@ -65,6 +67,9 @@
 	}
 	.border-bottom  {
 		border-bottom: 1px solid $grey;
+	}
+	.wrapper-kedr {
+		border-bottom: 1px solid #fff;
 	}
 	.about-work_img {
 		width: 50%;
@@ -101,6 +106,9 @@
 	.header__text-iphone {
 		display: block;
 	}
+	.header__text-ipad {
+		display: none;
+	}
 	.slide__item {
 		h2 {
 			font-size: 2.5rem;
@@ -108,6 +116,18 @@
 	}
 	.slider-custom2 .slide__item2 {
 		padding: 0;
+	}
+	.slider-custom3 .slide__item2 .btn{
+    	margin: 20px auto;
+    	text-align: center;
+    	display: block;
+	}
+	.new-title  {
+		margin-top: 50px;
+	}
+	.wrapp-news {
+		padding-bottom: 8px;
+    	border-bottom: 1px solid $grey;
 	}
 
 
@@ -173,12 +193,29 @@
 			    
 		}
 	}
+	.footer__menu {
+		.btn{
+		    order: 0;
+		}
+	}
+	.logo_quarter {
+		.logo_quarter__ipad {
+			display: none;
+		}
+		.logo_quarter__iphone {
+			display: inline-block;
+		}
+	}
 }
 
 
 @media (max-width: 375px) {
 	html {
 		font-size: 9px;
+	}
+	.btn {
+		padding: 20px 10px;
+   		width: 100%;
 	}
 	.wrapp_filters {
 		padding: 30px 10px;
@@ -223,6 +260,28 @@
 	.wrapp_resalt .body-resalt {
 		margin: 40px 0;
 	}
-			
 
+	.wrapp-modal-advantages .modal-advantages .close svg {
+		margin-left: 130px;
+	}
+	.wrapp-menu-logo p svg {
+		top: -40px;
+	}		
+
+}
+
+
+@media (max-width: 330px) {
+	.btn {
+		font-size: 1.8rem;
+	}
+	.wrapp-modal-advantages .modal-advantages .close svg {
+		margin-left: 120px;
+	}
+	.wrapp-menu-logo p svg {
+		top: -36px;
+	}
+	.wrapp_filter_result_item ul li h4 {
+		font-size: 2rem; 
+	}
 }

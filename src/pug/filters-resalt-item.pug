@@ -10,54 +10,54 @@ block content
 	include includes/_modal
 
 	include includes/_header
-	
-	section.title-logo_quarter
-		div.logo_quarter
-			img(src='img/kedr_logo.png' alt='Кедровый квартал')
-	
-	section.title-filter-result-item
-		div.wrapp_filter_result_item
-			h3 1-комната, 44,92 м <sup>2</sup>
-			p Кедровый квартал
-			img(src='img/house-shema.png')
-			+btn('btn-green btn-uppercase btn-center js_form_order','Оставить заявку')
-			ul
-				li
-					h4 Дом 
-					h4.grey №4
-				li
-					h4 Подъезд 
-					h4.grey 2
-				li
-					h4 Этаж 
-					h4.grey 17
-				li
-					h4 Комнаты 
-					h4.grey 1
-				li
-					h4 Площадь 
-					h4.grey 44.92м<span>2</span>
-				li
-					h4 Жилая площадь 
-					h4.grey 17,96<span>2</span>
-				li
-					h4 Общая стоимость 
-					h4.grey 50 600
-				li
-					h4 Стоимость за м <span>2</span> 
-					h4.grey 17,96 м<span>2</span>
-				li
-					h4 Высота потолка 
-					h4.grey 2,6 м
-				li
-					h4 Санузел 
-					h4.grey Раздельный
-				li
-					h4 Дополнительно 
-					h4.grey №4
-
-
-	include includes/_link_back
+	div.wrapp-filters-resalt-item-page
+		section.title-logo_quarter
+			div.logo_quarter
+					img.logo_quarter__ipad(src='img/kedr_logo.png' alt='Кедровый квартал')
+					img.logo_quarter__iphone(src='img/kedr_logo_iphone.png' alt='Кедровый квартал')
+		
+		section.title-filter-result-item
+			div.wrapp_filter_result_item
+				h3 1-комната, 44,92 м <sup>2</sup>
+				p Кедровый квартал
+				img(src='img/house-shema.png')
+				div.wrapp-btn
+					+btn('btn-green btn-uppercase btn-center js_form_order','Оставить заявку')
+				ul
+					li
+						h4 Дом 
+						h4.grey №4
+					li
+						h4 Подъезд 
+						h4.grey 2
+					li
+						h4 Этаж 
+						h4.grey 17
+					li
+						h4 Комнаты 
+						h4.grey 1
+					li
+						h4 Площадь 
+						h4.grey 44.92м<span>2</span>
+					li
+						h4 Жилая площадь 
+						h4.grey 17,96<span>2</span>
+					li
+						h4 Общая стоимость 
+						h4.grey 50 600
+					li
+						h4 Стоимость за м <span>2</span> 
+						h4.grey 17,96 м<span>2</span>
+					li
+						h4 Высота потолка 
+						h4.grey 2,6 м
+					li
+						h4 Санузел 
+						h4.grey Раздельный
+					li
+						h4 Дополнительно 
+						h4.grey №4
+		include includes/_link_back
 	include includes/_footer
 	
 

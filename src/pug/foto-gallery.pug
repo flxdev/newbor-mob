@@ -10,35 +10,37 @@ block content
 
 	include includes/_header
 	
-	section.title-logo_quarter
-		div.logo_quarter
-			img(src='img/kedr_logo.png' alt='Кедровый квартал')
-	nav.title-breadcrumbs
-		ul.breadcrumbs
-			li 
-				a Главная /
+	div.wrapp-foto-gallery-page
+		section.title-logo_quarter
+			div.logo_quarter
+				img.logo_quarter__ipad(src='img/kedr_logo.png' alt='Кедровый квартал')
+				img.logo_quarter__iphone(src='img/kedr_logo_iphone.png' alt='Кедровый квартал')
+		nav.title-breadcrumbs
+			ul.breadcrumbs
+				li 
+					a Главная /
 
-	mixin foto(id)
-		div.foto_galerias-item
-			//- Титулная фотка
-			-var id_g = 'gallery'+id
-			a(data-fancybox=id_g href="img/slide2.jpg" data-options='{"infobar" : "false", "buttons" : "false"}')
-				img(src="img/slide2.jpg" alt="alt")
-			//- Остальная галерея должна иметь класс .foto_none
-			-for (var i = 0; i < 5; i++){
-				a.foto_none(data-fancybox=id_g href="img/slide2.jpg" data-options='{"infobar" : "false", "buttons" : "false"}')
+		mixin foto(id)
+			div.foto_galerias-item
+				//- Титулная фотка
+				-var id_g = 'gallery'+id
+				a(data-fancybox=id_g href="img/slide2.jpg" data-options='{"infobar" : "false", "buttons" : "false"}')
 					img(src="img/slide2.jpg" alt="alt")
-			-}
-			h4.foto_galerias-item-title Ноябрь 2016 /
-			span.foto_galerias-item-descript 10 фото
-	
-	section.title-foto_galerias 
-		div.wrapp_foto_galerias
-			h3.foto_galerias-h3 Фотогалерея
-			-for(var i = 0; i<5; i++)
-				+foto(i+1)
+				//- Остальная галерея должна иметь класс .foto_none
+				-for (var i = 0; i < 5; i++){
+					a.foto_none(data-fancybox=id_g href="img/slide2.jpg" data-options='{"infobar" : "false", "buttons" : "false"}')
+						img(src="img/slide2.jpg" alt="alt")
+				-}
+				h4.foto_galerias-item-title Ноябрь 2016 /
+				span.foto_galerias-item-descript 10 фото
+		
+		section.title-foto_galerias 
+			div.wrapp_foto_galerias
+				h3.foto_galerias-h3 Фотогалерея
+				-for(var i = 0; i<5; i++)
+					+foto(i+1)
 
-	include includes/_link_back
+		include includes/_link_back
 	include includes/_footer
 	
 

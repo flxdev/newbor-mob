@@ -15,9 +15,9 @@ block content
 			h3.filters-h3 Подборка квартиры <span> по параметрам </span>
 			img
 			div.tabs
-				+btn('btn-white btn-tab_left js_tab', 'Быстрый', 'tab1')
-				+btn('btn-white_white-border btn-tab_right js_tab', 'Развернутый', 'tab2')
-			div.tabs-content_filters
+				+btn('btn-white btn-tab_left js_tab', 'Быстрый', 'tab1', 'btn-white', 'btn-white_white-border')
+				+btn('btn-white_white-border btn-tab_right js_tab', 'Развернутый', 'tab2', 'btn-white', 'btn-white_white-border')
+			div.tabs-content_filters.js-tabs-content
 				div.tabs-fast.js_tab_item(data-tab-container="tab1")
 					form
 						ul.tabs-fast_list
@@ -27,6 +27,8 @@ block content
 									p.filter-text_secondary
 										label.js_ui_slider_label
 										input.js_ui_slider_input(type="text" disabled)
+										input.hidden.js_ui_slider_value_top
+										input.hidden.js_ui_slider_value_bottom
 								div.filter-value
 									div.js_ui_slider_main
 									
@@ -53,10 +55,10 @@ block content
 									select.selectUi(name="select")
 										option С отделкой
 										option Без отделки
-
-						+btn('btn-white btn-center btn-uppercase btn-text_dark-green','Найти квартиру')
-						a 
-							p.link_reset &times; Сбросить все
+						div.wrapp-search-btn
+							+btn('btn-white btn-center btn-uppercase btn-text_dark-green','Найти квартиру')
+							a 
+								p.link_reset &times; Сбросить все
 
 				div.tabs-deployed.js_tab_item.hidden(data-tab-container="tab2")
 					form
@@ -67,6 +69,8 @@ block content
 									p.filter-text_secondary
 										label.js_ui_slider_label
 										input.js_ui_slider_input(type="text" disabled)
+										input.hidden.js_ui_slider_value_top
+										input.hidden.js_ui_slider_value_bottom
 								div.filter-value
 									div.js_ui_slider_main
 
@@ -76,6 +80,8 @@ block content
 									p.filter-text_secondary
 										label.js_ui_slider_label
 										input.js_ui_slider_input(type="text" disabled)
+										input.hidden.js_ui_slider_value_top
+										input.hidden.js_ui_slider_value_bottom
 								div.filter-value
 									div.js_ui_slider_main
 
@@ -85,6 +91,8 @@ block content
 									p.filter-text_secondary
 										label.js_ui_slider_label
 										input.js_ui_slider_input(type="text" disabled)
+										input.hidden.js_ui_slider_value_top
+										input.hidden.js_ui_slider_value_bottom
 								div.filter-value
 									div.js_ui_slider_main
 
@@ -94,6 +102,8 @@ block content
 									p.filter-text_secondary
 										label.js_ui_slider_label
 										input.js_ui_slider_input(type="text" disabled)
+										input.hidden.js_ui_slider_value_top
+										input.hidden.js_ui_slider_value_bottom
 								div.filter-value
 									div.js_ui_slider_main
 							
@@ -152,9 +162,10 @@ block content
 										option Лоджия, отделка, погреб
 										option Лоджия, отделка, погреб
 										option Лоджия, отделка, погреб
-						+btn('btn-white btn-center btn-uppercase btn-text_dark-green','Найти квартиру')
-						a 
-							p.link_reset &times; Сбросить все
+						div.wrapp-search-btn
+							+btn('btn-white btn-center btn-uppercase btn-text_dark-green','Найти квартиру')
+							a 
+								p.link_reset &times; Сбросить все
 
 	include includes/_footer
 	
