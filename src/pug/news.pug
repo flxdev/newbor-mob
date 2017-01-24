@@ -10,26 +10,27 @@ block content
 
 	include includes/_header
 	
-	nav.title-breadcrumbs
-		ul.breadcrumbs
-			li 
-				a Главная /
+	div.wrapp-news-page
+		nav.title-breadcrumbs
+				ul.breadcrumbs
+					li 
+						a(href='#') Главная /
 
-	section.title-news_shares
-		h3.news_title.__margin-20 Новости и акции
-		mixin news
-			div.house.news-fix_margin
-				img(src="img/slide2.jpg" alt="alt")
-				p.house-descript 2 декабря 2016
-				h4.house-title От 17,5% на 20 лет: уникальный кредит на жилье в НБ
-		div.wrapp-house.__margin-20.wrapp-house_price.wrapp-news
-			
-			+news
-			+news
-			+news
-			+news
-	
-	include includes/_link_back
+		section.title-news_shares
+			h3.news_title.__margin-20 Новости и акции
+			mixin news
+				div.house.news-fix
+					a(href='#')
+						img(src="img/slide2.jpg" alt="alt")
+						p.house-descript 2 декабря 2016
+						h4.house-title От 17,5% на 20 лет: уникальный кредит на жилье в НБ
+			div.wrapp-house.__margin-20.wrapp-house_price.wrapp-news
+				+news
+				+news
+				+news
+				+news
+		
+		include includes/_link_back
 	include includes/_footer
 	
 

@@ -18,27 +18,30 @@ block content
 		nav.title-breadcrumbs
 			ul.breadcrumbs
 				li 
-					a Главная /
+					a(href='#') Главная /
 
 		mixin foto(id)
-			div.foto_galerias-item
-				//- Титулная фотка
-				-var id_g = 'gallery'+id
-				a(data-fancybox=id_g href="img/slide2.jpg" data-options='{"infobar" : "false", "buttons" : "false"}')
-					img(src="img/slide2.jpg" alt="alt")
+			-var id_gg = 'lightgallery'+id
+			div.lightgallery-custom(id=id_gg)
+				//- Титульная фотка
+				a(href="img/slide2.jpg")
+					img(src="img/slide2.jpg" alt="")
+
 				//- Остальная галерея должна иметь класс .foto_none
 				-for (var i = 0; i < 5; i++){
-					a.foto_none(data-fancybox=id_g href="img/slide2.jpg" data-options='{"infobar" : "false", "buttons" : "false"}')
-						img(src="img/slide2.jpg" alt="alt")
+					a.foto_none(href="img/slide2.jpg")
+						img(src="img/slide2.jpg" alt="")
 				-}
-				h4.foto_galerias-item-title Ноябрь 2016 /
-				span.foto_galerias-item-descript 10 фото
+				
 		
 		section.title-foto_galerias 
+			h3.foto_galerias-h3.__margin-20 Фотогалерея
 			div.wrapp_foto_galerias
-				h3.foto_galerias-h3 Фотогалерея
 				-for(var i = 0; i<5; i++)
-					+foto(i+1)
+					div.foto_galerias-item
+						+foto(i+1)
+						h4.foto_galerias-item-title Ноябрь 2016 /
+						span.foto_galerias-item-descript 10 фото
 
 		include includes/_link_back
 	include includes/_footer

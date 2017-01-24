@@ -6,40 +6,42 @@ block title
 block content
 	include includes/_sliders
 	include includes/_btn
+	include includes/_a
 	include includes/_menu
 
 	include includes/_header
 	
-	section.title-logo_quarter
-		div.logo_quarter
-			img(src='img/kedr_logo.png' alt='Кедровый квартал')
-	nav.title-breadcrumbs
-		ul.breadcrumbs
-			li 
-				a Главная /
+	div.wrapp-price-page
+		section.title-logo_quarter
+			div.logo_quarter
+				img(src='img/kedr_logo.png' alt='Кедровый квартал')
+		nav.title-breadcrumbs
+			ul.breadcrumbs
+				li 
+					a(href='#') Главная /
 
-	section.title-price_contact
-		div.wrapp_price_contact.__margin-20
-			h4 Цены и условия
-			p Уважаемые клиенты, подробную информацию о стоимости, наличии квартир и условиях покупки вы можете узнать по телефонам колл-центра:
-			ul
-				li +375 29 300-00-00 
-				li +375 29 1-328-328
-				li +375 29 555-000-0
-	section.title-price_house
-		mixin house
-			div.house
-				h4.house-title Дом 6
-				p.house-descript.no_margin (9.6 по генплану), 19 этажей
-				p.house-descript Срок сдачи: сдан в 1 квартале 2016 
-				img(src="img/slide2.jpg" alt="alt")
-				+btn('btn-green btn-uppercase btn-center', 'подобрать по параметрам')
-		div.wrapp-house.__margin-20.wrapp-house_price
-			+house
-			+house
-			+house
-	
-	include includes/_link_back
+		section.title-price_contact
+			div.wrapp_price_contact.__margin-20
+				h4 Цены и условия
+				p Уважаемые клиенты, подробную информацию о стоимости, наличии квартир и условиях покупки вы можете узнать по телефонам колл-центра:
+				ul
+					li +375 29 300-00-00 
+					li +375 29 1-328-328
+					li +375 29 555-000-0
+		section.title-price_house
+			mixin house
+				div.house
+					h4.house-title Дом 6
+					p.house-descript.no_margin (9.6 по генплану), 19 этажей
+					p.house-descript Срок сдачи: сдан в 1 квартале 2016 
+					img(src="img/slide2.jpg" alt="alt")
+					+a('btn-green btn-uppercase btn-center', 'подобрать по параметрам')
+			div.wrapp-house.__margin-20.wrapp-house_price
+				+house
+				+house
+				+house
+		
+		include includes/_link_back
 	include includes/_footer
 	
 

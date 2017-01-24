@@ -1,7 +1,75 @@
-$(document).ready(function() {
+function dropLinks(click, toggleClass)  {
+	$(click).toggleClass(toggleClass);
+}
+function initYandexMap(){   
+	var mapSetting = {};
+	mapSetting.centerX = $('#map').data("center-x");
+	mapSetting.centerY = $('#map').data("center-y");
+	mapSetting.zoom = $('#map').data("zoom");
+	mapSetting.markerX = $('#map').data("marker-x");
+	mapSetting.markerY = $('#map').data("marker-y");
 
-//init slick slider
+	var myMap;
+	myMap = new ymaps.Map("map", {
+		center: [mapSetting.centerX,mapSetting.centerY],
+		zoom: mapSetting.zoom
+	});
 
+	myMap.behaviors.disable('multiTouch'); 
+	myMap.behaviors.disable('drag');
+
+	myPlacemark0 = new ymaps.Placemark([mapSetting.markerX,mapSetting.markerY], {
+		balloonContent: '' 
+		}, {
+		iconImageHref: 'img/map-marker.png', 
+		iconImageSize: [27, 35], 
+		iconImageOffset: [0, 0], 
+		balloonContentSize: [27, 35], 
+		balloonLayout: "default#imageWithContent", 
+		balloonImageHref: 'img/ballon1.png', 
+		balloonImageOffset: [0, 0], 
+		balloonImageSize: [27, 35], 
+		balloonShadow: false
+	}); 
+	myMap.geoObjects.add(myPlacemark0);
+}
+function initSlidersUi() {
+	$('.js_ui_slider').each(function () {
+		var __parent = $(this.parentNode.parentNode).find('.filter-text_secondary')[0];
+		var slider = $(this).find('.js_ui_slider_main');
+		var sliderSetting = {};
+		sliderSetting.max = $(this).data("max");
+		sliderSetting.min = $(this).data("min");
+		sliderSetting.step = $(this).data("step");
+		sliderSetting.defaultValueTo = $(this).data("default-value-to");
+		sliderSetting.defaultValueFrom = $(this).data("default-value-from");
+		sliderSetting.labelTo = $(this).find('.js_ui_slider_label');
+		sliderSetting.inputHidden = $(this).find('.js_ui_slider_input');
+		sliderSetting.inputHiddenTop = $(this).find('.js_ui_slider_value_top');
+		sliderSetting.inputHiddenBottom = $(this).find('.js_ui_slider_value_bottom');
+		$(sliderSetting.inputHidden).val( sliderSetting.defaultValueTo + " - " + sliderSetting.defaultValueFrom );
+		$(sliderSetting.inputHiddenTop).val(sliderSetting.defaultValueFrom);
+		$(sliderSetting.inputHiddenBottom).val(sliderSetting.defaultValueTo);
+		slider.slider({
+			range: true,
+			min: sliderSetting.min,
+			max: sliderSetting.max,
+			step: sliderSetting.step,
+			values: [ sliderSetting.defaultValueTo, sliderSetting.defaultValueFrom ],
+			slide: function( event, ui ) {
+				$(sliderSetting.inputHidden).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+				$(sliderSetting.inputHiddenTop).val(ui.values[ 1 ]);
+				$(sliderSetting.inputHiddenBottom).val(ui.values[ 0 ]);
+			}
+		});
+	});
+}
+function initSelectUi() {
+	$('.selectUi').each(function () {
+		$(this).selectmenu();
+	});
+}
+function initSliderSlick() {
 	$('.slider-init').slick({
 		dots: true,
 		arrows: true,
@@ -17,9 +85,7 @@ $(document).ready(function() {
 			}
 		]		
 	});
-
-//init slick double slider
-
+	//init slick double slider
 	$('.slider-init-2_1').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -38,62 +104,81 @@ $(document).ready(function() {
 		focusOnSelect: true,
 		fade: true
 	});
+}
+
+function tabs() {
+	var clickTab = $(this).data('tab');
+	$('.js_tab').each(function() {
+		var switchClass1 = $(this).data('add'),
+			switchClass2 = $(this).data('remove');
+		if( $(this).data('tab') == clickTab ){
+			$(this).addClass(switchClass1);
+			$(this).removeClass(switchClass2);
+		}
+		else {
+			$(this).removeClass(switchClass1);
+			$(this).addClass(switchClass2);
+		}
+	});
+	$('.js-tabs-content').find('.js_tab_item').each(function() {
+		if( $(this).data('tab-container') != clickTab ){
+			$(this).addClass('hidden');
+		}
+		else {
+			$(this).removeClass('hidden');
+		}
+	});
+}
+
+function openModal(what, close, oh1, oh2) {
+	if (what == '.js_modal_mobile_open') {
+		$(what).find('.success_submit').addClass('hidden');
+		$(what).find('.form_fields').removeClass('hidden');
+	}
+	$(close).removeClass('menu_mobile-close');
+	$(what).toggleClass('menu_mobile-close');
+	$('body').removeClass(oh2);
+	$('body').toggleClass(oh1);
+	
+}
+
+
+function chars() {
+	$('.chars').on('keypress', function(key){
+		if((key.charCode < 40 || key.charCode > 41) && (key.charCode < 48 || key.charCode > 57) && (key.charCode != 45) && (key.charCode != 32) && (key.charCode != 43) && (key.charCode != 0))
+			return false;
+	});
+} chars();
+
+$(document).ready(function() {
+
+//init slick slider
+	initSliderSlick();
 
 //script init draggable sliderUI
-
 	// $(".js_ui_slider").draggable();
 
 //script init sliderUi
-
 	initSlidersUi();
-
 //script init selectUi
-
 	initSelectUi();
 
 //script swich tabs
-
-	$('.js_tab').on('click', function(e) {
-		var clickTab = $(this).data('tab');
-		$('.js_tab').each(function() {
-			var switchClass1 = $(this).data('add'),
-				switchClass2 = $(this).data('remove');
-				console.log()
-			if( $(this).data('tab') == clickTab ){
-				$(this).addClass(switchClass1);
-				$(this).removeClass(switchClass2);
-			}
-			else {
-				$(this).removeClass(switchClass1);
-				$(this).addClass(switchClass2);
-			}
-		});
-		$('.js-tabs-content').find('.js_tab_item').each(function() {
-			if( $(this).data('tab-container') != clickTab ){
-				$(this).addClass('hidden');
-			}
-			else {
-				$(this).removeClass('hidden');
-			}
-		});
+	$('.js_tab').on('click', function() {
+		tabs.call(this);
 	});
 
-
 //srcript open/close menu
-
 	$('.js-menu-open').on('click', function() {
-		$('.js_menu_mobile_open').toggleClass('menu_mobile-close');
-		$('body').toggleClass('overflow-hidden');
-		dropLinks('#header__menu', 'header__menu-white');
+		openModal('.js_menu_mobile_open', '.js_modal_mobile_open', 'overflow-hidden-2','overflow-hidden-1'); 
+		// dropLinks('#header__menu', 'header__menu-white');
 	});
 
 	$('.js_form_order').on('click', function() {
-		$('.js_modal_mobile_open').toggleClass('menu_mobile-close');
-		$('body').toggleClass('overflow-hidden');
+		openModal('.js_modal_mobile_open', '.js_menu_mobile_open', 'overflow-hidden-1','overflow-hidden-2');
 	});
 
 //srcript open modal advantages 
-
 	$('.js-modal_advantages').on('click', function() {
 		var clickModal = $(this).data('modal-advantages');
 		$('.js-modal-advantages-content').find('.js_modal-advantages_open').each(function() {
@@ -102,12 +187,9 @@ $(document).ready(function() {
 				$('body').toggleClass('overflow-hidden');
 			}
 		});
-		
-
 	});
 
 //scripts open/close dropdown text
-
 	$('#transport').on('click', function() {
 		dropLinks('#transport-open', 'read-other__open')
 	});
@@ -124,88 +206,40 @@ $(document).ready(function() {
 //init map
 	if ($('#map').length > 0) ymaps.ready(initYandexMap);
 
-});
-
-	function dropLinks(click, toggleClass)  {
-		$(click).toggleClass(toggleClass);
-		console.log(click,toggleClass);
-	}
-
-//init map function
-
-	function initYandexMap(){   
-		var mapSetting = {};
-		mapSetting.centerX = $('#map').data("center-x");
-		mapSetting.centerY = $('#map').data("center-y");
-		mapSetting.zoom = $('#map').data("zoom");
-		mapSetting.markerX = $('#map').data("marker-x");
-		mapSetting.markerY = $('#map').data("marker-y");
-
-	    var myMap;
-	    myMap = new ymaps.Map("map", {
-	        center: [mapSetting.centerX,mapSetting.centerY],
-	        zoom: mapSetting.zoom
-	    });
-	    myPlacemark0 = new ymaps.Placemark([mapSetting.markerX,mapSetting.markerY], {
-        balloonContent: '' 
-			}, {
-			iconImageHref: 'img/map-marker.png', 
-			iconImageSize: [27, 35], 
-			iconImageOffset: [0, 0], 
-			balloonContentSize: [27, 35], 
-			balloonLayout: "default#imageWithContent", 
-			balloonImageHref: 'img/ballon1.png', 
-			balloonImageOffset: [0, 0], 
-			balloonImageSize: [27, 35], 
-			balloonShadow: false
-		}); 
-		myMap.geoObjects
-			.add(myPlacemark0);
-		}
-
-//init sliderUi function
-
-	function initSlidersUi() {
-		$('.js_ui_slider').each(function () {
-			var __parent = $(this.parentNode.parentNode).find('.filter-text_secondary')[0];
-			var slider = $(this).find('.js_ui_slider_main');
-			var sliderSetting = {};
-			sliderSetting.max = $(this).data("max");
-			sliderSetting.min = $(this).data("min");
-			sliderSetting.step = $(this).data("step");
-			sliderSetting.defaultValueTo = $(this).data("default-value-to");
-			sliderSetting.defaultValueFrom = $(this).data("default-value-from");
-			sliderSetting.labelTo = $(this).find('.js_ui_slider_label');
-			sliderSetting.inputHidden = $(this).find('.js_ui_slider_input');
-			sliderSetting.inputHiddenTop = $(this).find('.js_ui_slider_value_top');
-			sliderSetting.inputHiddenBottom = $(this).find('.js_ui_slider_value_bottom');
-			$(sliderSetting.inputHidden).val( sliderSetting.defaultValueTo + " - " + sliderSetting.defaultValueFrom );
-			$(sliderSetting.inputHiddenTop).val(sliderSetting.defaultValueFrom);
-			$(sliderSetting.inputHiddenBottom).val(sliderSetting.defaultValueTo);
-			slider.slider({
-				range: true,
-				min: sliderSetting.min,
-				max: sliderSetting.max,
-				step: sliderSetting.step,
-				values: [ sliderSetting.defaultValueTo, sliderSetting.defaultValueFrom ],
-				slide: function( event, ui ) {
-					$(sliderSetting.inputHidden).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
-					$(sliderSetting.inputHiddenTop).val(ui.values[ 1 ]);
-					$(sliderSetting.inputHiddenBottom).val(ui.values[ 0 ]);
+	$('.fancybox-image').on('click', function(e) {
+		console.log(e);
+		e.preventDefault();
+	});
+	$('.fancybox-slide.fancybox-slide--current.fancybox-slide--image.fancybox-slide--complete').on('click', function(e) {
+		console.log(e);
+		e.preventDefault();
+	});
+	
+//form
+	var form_valid = $('.js_submit_form');
+	if (form_valid.length) {
+		form_valid.each(function() {
+			var form_this  = $(this);
+			$.validate({
+				form: form_this, 
+				borderColorOnError: true,
+				scrollToTopOnError: false, 
+				onSuccess: function($form) {
+						$($form).find('.success_submit').removeClass('hidden');
+						$($form).find('.form_fields').addClass('hidden');
+						$($form).trigger("reset");
+					return false;
 				}
 			});
-				
-		   });
-	}
-
-//init selectUi function
-
-	function initSelectUi() {
-		$('.selectUi').each(function () {
-			$(this).selectmenu();
 		});
 	}
 
+//init gallery
+	var l = $('.lightgallery-custom');
+	$(l).each(function() {
+		var d = document.getElementById(this.id);
 
+		lightGallery(d);
+	});
 
-			
+});

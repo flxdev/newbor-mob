@@ -120,9 +120,9 @@ block content
 				p Как добраться
 				div.accordion
 					div.accordion-item
-						div#transport
+						div.slow-drop#transport
 							span.read-other.read-other_black Общественный транспорт
-						div.read-other__close#transport-open
+						div.slow-drop.read-other__close#transport-open
 							h3 Автобусы, Троллейбусы
 							p 34 3643 783742
 					.accordion-item
@@ -133,6 +133,7 @@ block content
 							p 34 3643 783742
 		
 		include includes/_menu
+		include includes/_modal
 		div.js-modal-advantages-content
 			include includes/_modal-advantages
 	include includes/_footer		

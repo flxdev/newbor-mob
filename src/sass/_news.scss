@@ -1,6 +1,10 @@
 //news
 .wrapp-news {
-	.news-fix_margin {
+	a {
+		color: #000;
+		text-decoration: none;
+	}
+	.news-fix {
 		&:nth-child(odd){
 			margin: 0 0 40px 0;
 			padding-right: 10px;
@@ -8,6 +12,10 @@
 		&:nth-child(even){
 			margin: 0 0 40px 0;
 			padding-left: 10px;
+		}
+		.house-title {
+			max-height: 120px;
+			overflow: hidden;
 		}
 	}
 }

@@ -137,7 +137,13 @@
 	// --------------
 
 	.wrapp_foto_galerias .foto_galerias-item {
-		width: 100%;
+		flex-basis: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.wrapp_foto_galerias .foto_galerias-item:nth-child(odd), .wrapp_foto_galerias .foto_galerias-item:nth-child(even) {
+		padding-left: 0;
+		padding-right: 0;
 	}
 	// --------------
 	// about
@@ -160,7 +166,7 @@
 	// --------------
 	.wrapp-house_price {
 		.house {
-			width: 100%;
+			flex-basis: 100%;
 			&:nth-child(odd) {
 				margin-right: 0;
 			}
@@ -205,6 +211,14 @@
 		.logo_quarter__iphone {
 			display: inline-block;
 		}
+	}
+	.wrapp_loyalty_text img {
+		width: 100%;
+	}
+	.wrapp-news .news-fix {
+		flex-basis: 100%;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
 	}
 }
 
