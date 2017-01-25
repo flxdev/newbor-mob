@@ -17,7 +17,7 @@ body {
 	margin: 0;
 	display: flex;
 	flex-flow: column no-wrap;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 	height: 100%;
 	// transition-property: all;
@@ -44,6 +44,7 @@ ul { list-style-type: none; }
 } 
 .out {
 	width: 100%;
+	min-height: 80vh;
 }
 .__margin-20 {
 	margin: 0 20px;

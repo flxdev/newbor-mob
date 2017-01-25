@@ -452,13 +452,13 @@
 
 .read-other__close {
 	display: none;
-	opacity: 0;
-	transition: all 3s ease;
+	// // opacity: 0;
+	// transition: all 3s ease;
 }
 .read-other__open {
 	display: block;
-	opacity: 1;
-	transition: all 3s ease;
+	// opacity: 1;
+	// transition: all 3s ease;
 	
 }
 .read-other__svg {
@@ -640,11 +640,12 @@
 	.form-error {
 		font-size: 1.5rem;
 		font-family: $font_r;
-		color: red;
+		color: #fc2451;
+		display: none;
 	}
 	.error {
-		border-color: red;
-		color: red;
+		border-color: #fc2451;
+		color: #fc2451;
 	}
 	input,textarea {
 		border-radius: 5px;
