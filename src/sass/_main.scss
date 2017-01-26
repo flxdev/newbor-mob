@@ -245,8 +245,12 @@
 }
 .about-work_list {
 	li {
-		margin: 15px 0;
+		// margin: 15px 0;
+		padding: 5px 0;
 	}
+}
+#work_list-open {
+	display: none;
 }
 
 .sales-dep	 {
@@ -410,6 +414,7 @@
 }
 .footer__footer {
 	background-color: #000;
+	min-height: 710px;
 }
 
 // breadcrumbs

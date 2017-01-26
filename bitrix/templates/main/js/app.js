@@ -203,7 +203,8 @@ function initSliderSlick() {
 		dots: false,
 		arrows: false,
 		focusOnSelect: true,
-		fade: true
+		fade: true,
+		swipe: false
 	});
 }
 

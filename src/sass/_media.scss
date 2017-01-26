@@ -40,6 +40,9 @@
 	// html {
 	// 	font-size: 7px;
 	// }
+	.footer__footer {
+		min-height: 975px;
+	}
 	.btn {
 		padding: 20px 50px;
 		text-align: center;
@@ -194,9 +197,8 @@
 			.group_chechbox {
 				padding-top: 25px;
 				justify-content: center;
+				margin-left: 42px;
 			}
-			
-			    
 		}
 	}
 	.footer__menu {
@@ -286,6 +288,9 @@
 
 
 @media (max-width: 330px) {
+	.read-other {
+		font-size: 2.3rem;
+	}
 	.btn {
 		font-size: 1.8rem;
 	}

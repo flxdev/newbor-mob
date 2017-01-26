@@ -44,7 +44,10 @@ ul { list-style-type: none; }
 } 
 .out {
 	width: 100%;
-	min-height: 80vh;
+	min-height: 100vh;    
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .__margin-20 {
 	margin: 0 20px;
