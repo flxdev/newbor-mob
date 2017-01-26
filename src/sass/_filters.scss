@@ -94,6 +94,10 @@ input[type=checkbox]:checked + label.checkbox-custom {
 			.title-h3 {
 				color: $prime-color;
 				display: inline-block;
+				a {
+					color: $prime-color;
+					text-decoration: none;
+				}
 			}
 			svg {
 				width: 30px;
