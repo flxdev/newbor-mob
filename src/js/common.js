@@ -243,15 +243,18 @@ $(document).ready(function() {
 //form
 	var form_valid = $(".js_submit_form");
 	if (form_valid.length) {
+		console.log('1234');
 		form_valid.each(function() {
+			console.log('1234');
 			var form_this  = $(this);
 			$.validate({
 				form: form_this, 
 				borderColorOnError: true,
 				scrollToTopOnError: false, 
 				onSuccess: function($form) {
-						$($form).find(".success_submit").removeClass("hidden");
-						$($form).find(".form_fields").addClass("hidden");
+						console.log('1234');
+						$($form).find(".js_success_submit").removeClass("hidden");
+						$($form).find(".js_form_fields").addClass("hidden");
 						$($form).trigger("reset");
 					return false;
 				}
