@@ -1,22 +1,28 @@
 div.menu_mobile.js_menu_mobile_open
-	
 	div.footer.footer__menu
 		div.wrapp-menu-logo
 			img.menu-logo(src='img/logo_white.png' alt='logo' )
-			p.js-menu-open <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg>
+			p.js-menu-close <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg>
 		div.menu-title
 			div.wrapper-kedr.border-bottom
-				h3#js-title-kedr-menu 
+				h3.js-title-kedr-menu 
 					a(href='#') Кедровый квартал
-				ul.links_quarter.links_quarter-drop#js-title-kedr-content
+				ul.links_quarter.links_quarter-drop.js-title-kedr-content
 					li 
 						a(href='#') О квартале
 					li 
 						a(href='#') Цены и условия
 					li 
 						a(href='#') Фотогалерея
-			h3 
+			h3.js-title-sosn-menu  
 				a(href='#') Сосновый квартал
+			ul.links_quarter.links_quarter-drop.js-title-sosn-content
+					li 
+						a(href='#') О квартале
+					li 
+						a(href='#') Цены и условия
+					li 
+						a(href='#') Фотогалерея
 		
 		
 					
@@ -38,7 +44,7 @@ div.menu_mobile.js_menu_mobile_open
 
 		h3 +375 29 300 00 00
 
-		+btn('btn-opasity btn-center btn-uppercase js_form_order', 'Обратный звонок')
+		+btn('btn-opasity btn-center btn-uppercase js_form_order-open', 'Обратный звонок')
 
 		ul.social_links
 			li

@@ -1,5 +1,5 @@
 .logo_quarter {
-	margin: 20px;
+	margin: 0 20px;
 	background-color: $prime-color;
 	text-align: center;
 	img {
@@ -10,12 +10,7 @@
 		display: none;
 	}
 }
-.breadcrumbs {
-	margin: 20px;
-	li {
-		padding: 10px 5px;
-	}
-}
+
 .wrapp_foto_galerias {
 	margin: 20px;
 	display: flex;

@@ -9,12 +9,11 @@
 }
 @media (max-width: 670px) {
 	.wrapp_filters {
-		padding: 50px 20px;
+		padding: 30px 20px 60px;
 		.tabs-content_filters {
 			.tabs-fast, .tabs-deployed	{
 				.tabs-fast_list {
 					.tabs-fast_list_item {
-						padding: 15px 0;
 						.filter-text{
 							flex-basis: 100% !important;
 							padding: 0;
@@ -31,7 +30,7 @@
 	}
 	.wrapp_filter_result_item {
 		ul {
-			padding: 0 20px;
+			padding: 0;
 		}
 	}
 }
@@ -40,6 +39,7 @@
 	// html {
 	// 	font-size: 7px;
 	// }
+	
 	.footer__footer {
 		min-height: 975px;
 	}
@@ -117,9 +117,6 @@
 			font-size: 2.5rem;
 		}
 	}
-	.slider-custom2 .slide__item2 {
-		padding: 0;
-	}
 	.slider-custom3 .slide__item2 .btn{
     	margin: 20px auto;
     	text-align: center;
@@ -185,14 +182,15 @@
 	// --------------
 
 	.wrapp_resalt {
+		margin-top: 0;
 		.header-resalt {
 			.group_chechbox, .title-h3-wrapp {
 				flex-basis: 100%;
-				border-top:  2px solid $grey;
 			}
 			.title-h3-wrapp {
 				text-align: center;
 				padding: 25px 0;
+				border-bottom:  1px solid $grey;
 			}
 			.group_chechbox {
 				padding-top: 25px;
@@ -222,6 +220,16 @@
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 	}
+	.wrapp_resalt .body-resalt .list-items-resalts .item-resalts .wrapp-img {
+		flex-basis: 30%;
+	}
+	.wrapp_resalt .body-resalt .list-items-resalts .item-resalts .info-item-resalt {
+		flex-basis: 70%;
+		padding: 0 0 0 10px;
+	}
+	.wrapp_resalt .body-resalt .list-items-resalts .item-resalts .info-item-resalt div h4 {
+		line-height: 1.2;
+	}
 }
 
 
@@ -233,8 +241,13 @@
 		padding: 20px 10px;
    		width: 100%;
 	}
+
+	.read-other {
+		font-size: 2.3rem;
+	}
 	.wrapp_filters {
-		padding: 30px 10px;
+		padding: 30px 20px 60px;
+    	margin: 0 10px 30px;
 		.filters-h3 {
 			span {
 				display: none;
@@ -255,7 +268,6 @@
 			.tabs-fast, .tabs-deployed	{
 				.tabs-fast_list {
 					.tabs-fast_list_item {
-						padding: 15px 0;
 						.filter-text{
 							flex-basis: 100% !important;
 							padding: 0;
@@ -277,23 +289,29 @@
 		margin: 40px 0;
 	}
 
-	.wrapp-modal-advantages .modal-advantages .close svg {
-		margin-left: 130px;
+	.wrapp-modal-advantage .modal-advantage .close svg {
+		margin-left: 125px;
 	}
 	.wrapp-menu-logo p svg {
 		top: -40px;
-	}		
+	}
+	.map {
+		div {
+			height: 300px;
+		}
+		.btn {
+			padding: 20px 10px;
+		}
+	}
+	.wrapp_filters .filters-h3 svg {
+		display: none;
+	}
+	
 
 }
 
 
 @media (max-width: 330px) {
-	.read-other {
-		font-size: 2.3rem;
-	}
-	.btn {
-		font-size: 1.8rem;
-	}
 	.wrapp-modal-advantages .modal-advantages .close svg {
 		margin-left: 120px;
 	}

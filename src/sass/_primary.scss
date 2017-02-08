@@ -10,7 +10,6 @@ body {
   	font-weight: 500;
   	min-width: 320px;
   	max-width: 1024px;
-  	position: relative;
   	line-height: 1.6;
   	background-color: #f4f4f4;
 	padding: 0;
@@ -20,6 +19,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	height: 100%;
+	// position: relative;
 	// transition-property: all;
 	// transition-duration: 2s;
 	// transition-delay: 1s;

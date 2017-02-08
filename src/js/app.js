@@ -6,4 +6,5 @@
 // =include lib/jquery-ui.min.js
 // =include lib/jquery.form-validator.min.js
 // =include lib/jquery.ui.touch-punch.min.js
+// =include lib/multiple-select.js
 // =include common.js
