@@ -77,7 +77,7 @@
 }
 
 .slider-custom1 {
-	margin: 0 20px;
+	margin: 20px;
 	.slick-arrow {
 		display: none !important;
 	}
@@ -434,8 +434,18 @@
 	.btn { margin: 0 0 20px; }
 }
 .footer__footer {
-	background-color: #000;
+	background-color: #252525;
 	min-height: 710px;
+	h3 {
+		font-family: pf_regular;
+		font-size: 3rem;
+	}
+	.js-title-sosn-content {
+		display: none;
+	}
+	.btn {
+		margin-top: 35px !important;
+	}
 }
 
 // breadcrumbs
@@ -448,7 +458,7 @@
 	li {
 		padding-right: 3px;
 		a {
-			color: $grey;
+			color: $grey_dark;
 			text-decoration:none;
 		}
 	}
@@ -583,7 +593,7 @@
 .btn-black_noactive {
 	border: 1px solid #000; 
 	background-color: rgba(0,0,0,0);
-	color: $grey;
+	color: $grey_dark;
 }
 .btn-text_dark-green {
 	color: #757e1f;
@@ -617,7 +627,7 @@
 //ui-slider
 
 .ui-slider-horizontal {
-	height: 5px;
+	height: 3px;
 }	
 .ui-widget.ui-widget-content {
 	border: none;

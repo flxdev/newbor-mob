@@ -99,9 +99,9 @@
 		}
 		.links_quarter { order:0; }
 		.links_all { order:1; }
-		.btn { order:3; margin: 0 0 20px; }
+		.btn { order:0; margin: 0 0 20px; }
 		.footer_info { order:10; }
-		.social_links { order:5; }
+		.social_links { order:10; }
 	}
 	.header .header__text {
 		display: none;
@@ -129,8 +129,9 @@
 		padding-bottom: 8px;
     	border-bottom: 1px solid $grey;
 	}
-
-
+	.slider-custom1,.logo_quarter {
+		margin: 0 20px;
+	}
 
 	// --------------
 	// foto_galerias
@@ -229,6 +230,13 @@
 	}
 	.wrapp_resalt .body-resalt .list-items-resalts .item-resalts .info-item-resalt div h4 {
 		line-height: 1.2;
+	}
+	.title-about_menu {
+		.house {
+			flex-basis: 100%;
+			margin: 0 !important;
+			padding: 30px 0;
+		}
 	}
 }
 

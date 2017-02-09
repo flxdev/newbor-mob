@@ -172,7 +172,7 @@ input[type=checkbox]:checked + label.checkbox-custom {
     					padding-right: 15px;
 					}
 					p {
-						color: $grey;
+						color: $grey_dark;
 					}
 					.price {
 						font-family: $font_r;
@@ -225,7 +225,7 @@ input[type=checkbox]:checked + label.checkbox-custom__check:after {
 .wrapp_filter_result_item {
 	margin: 40px 20px;
 	p {
-		color: $grey;
+		color: $grey_dark;
 	}
 	img {
 		width: 100%;
@@ -307,6 +307,7 @@ input[type=checkbox]:checked + label.checkbox-custom__check:after {
 .ms-drop ul>li {
 	color: $prime-color;
 	font-size: 2.4rem;
+	padding-left: 7px;
 }
 
 
