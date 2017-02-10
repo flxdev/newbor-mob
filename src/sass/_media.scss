@@ -42,6 +42,10 @@
 	
 	.footer__footer {
 		min-height: 975px;
+		.wrapp-menu_footer {
+			flex-basis: 100%;
+			text-align: center;
+		}	
 	}
 	.btn {
 		padding: 20px 50px;
@@ -129,8 +133,14 @@
 		padding-bottom: 8px;
     	border-bottom: 1px solid $grey;
 	}
-	.slider-custom1,.logo_quarter {
+	.logo_quarter {
 		margin: 0 20px;
+	}
+	.slider-custom1 {
+		margin: 0;
+	}
+	.slider-custom1 .slide__item img {
+		padding: 0 10px;
 	}
 
 	// --------------
