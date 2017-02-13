@@ -250,13 +250,18 @@ $(document).ready(function() {
 		setTimeout(opasity, 500);
 	});
  	
-	$(".js-title-kedr-menu").on("click", function() {
-		$(this).siblings(".js-title-kedr-content").slideToggle(250)
-	});
+	// $(".js-title-kedr-menu").on("click", function() {
+	// 	$(this).siblings(".js-title-kedr-content").slideToggle(250)
+	// });
 
-	$(".js-title-sosn-menu").on("click", function() {
-		$(this).siblings(".js-title-sosn-content").slideToggle(250)
-	});
+	// $(".js-title-sosn-menu").on("click", function() {
+	// 	$(this).siblings(".js-title-sosn-content").slideToggle(250)
+	// });
+	$('.js-drop').each(function() {
+		$(this).on("click", function() {
+			$(this).siblings(".js-drop-content").slideToggle(250)
+		});
+	})
 
 	$(".js-form-reset").on("click", function() {
 		resetFilter();
