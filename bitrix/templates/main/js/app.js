@@ -880,13 +880,13 @@ function initYandexMap(){
 		}, {
 		iconImageHref: "img/map-marker.png", 
 		iconImageSize: [27, 35], 
-		iconImageOffset: [0, 0], 
-		balloonContentSize: [27, 35], 
-		balloonLayout: "default#imageWithContent", 
-		balloonImageHref: "img/ballon1.png", 
-		balloonImageOffset: [0, 0], 
-		balloonImageSize: [27, 35], 
-		balloonShadow: false
+		iconImageOffset: [0, 0]
+		// balloonContentSize: [27, 35], 
+		// balloonLayout: "default#imageWithContent", 
+		// balloonImageHref: "img/map-marker.png", 
+		// balloonImageOffset: [0, 0], 
+		// balloonImageSize: [27, 35], 
+		// balloonShadow: false
 	}); 
 	myMap.geoObjects.add(myPlacemark0);
 }
@@ -1137,7 +1137,7 @@ $(document).ready(function() {
 	var l = $(".lightgallery-custom");
 	$(l).each(function() {
 		var d = document.getElementById(this.id);
-		lightGallery(d);
+		lightGallery(d, {controls:true});
 	});
 
 

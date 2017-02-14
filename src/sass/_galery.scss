@@ -66,6 +66,16 @@
 	}
 }
 
-.slider-init-2_1 {
-	
+.lg-toolbar .lg-icon.lg-close {
+	display: block!important;
+	background-image: url('../img/icons/close.png');
+	background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.lg-toolbar .lg-close:after {
+	content: '';
+}
+.lg-backdrop {
+	background-color: rgba(182, 197, 39, 0.9);
 }
