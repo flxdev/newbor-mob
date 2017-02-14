@@ -131,7 +131,12 @@
 	}
 	.wrapp-news {
 		padding-bottom: 8px;
-    	border-bottom: 1px solid $grey;
+    	// border-bottom: 1px solid $grey;
+	}
+	.about-work {
+		border-top: 1px solid $grey;
+	    margin-top: 0;
+	    padding-top: 40px;
 	}
 	.logo_quarter {
 		margin: 0 20px;

@@ -232,15 +232,6 @@ $(document).ready(function() {
 
 
 //scripts open/close dropdown text
-	$("#transport").on("click", function() {
-		$("#transport-open").slideToggle(250);
-		$(this).find(".read-svg-arrow").toggleClass("read-other__svg");
-	});
-	$("#auto").on("click", function() {
-		$("#auto-open").slideToggle(250);
-		$(this).find(".read-svg-arrow").toggleClass("read-other__svg");
-	});
-
 	$("#work_list").on("click", function() {
 		$("#work_list-open").slideToggle(250);
 		$(this).find(".read-other").toggleClass("read-other__svg");
@@ -249,14 +240,7 @@ $(document).ready(function() {
 		}
 		setTimeout(opasity, 500);
 	});
- 	
-	// $(".js-title-kedr-menu").on("click", function() {
-	// 	$(this).siblings(".js-title-kedr-content").slideToggle(250)
-	// });
 
-	// $(".js-title-sosn-menu").on("click", function() {
-	// 	$(this).siblings(".js-title-sosn-content").slideToggle(250)
-	// });
 	$('.js-drop').each(function() {
 		$(this).on("click", function() {
 			$(this).siblings(".js-drop-content").slideToggle(250)
