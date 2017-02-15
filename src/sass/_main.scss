@@ -458,6 +458,11 @@
 .footer__footer {
 	background-color: #252525;
 	min-height: 100%;
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
 	h3 {
 		font-family: pf_regular;
 		font-size: 3rem;
