@@ -1026,19 +1026,19 @@ $(document).ready(function() {
 //init slick slider
 	initSliderSlick();
 
-//script init draggable sliderUI
+//init draggable sliderUI
 	$(".ui-state-default").draggable();
-//script init sliderUi
+//init sliderUi
 	initSlidersUi();
-//script init selectUi
+//init selectUi
 	initSelectUi();
 
-//script swich tabs
+//swich tabs
 	$(".js_tab").on("click", function() {
 		tabs.call(this);
 	});
 
-//srcript open/close menu
+//sopen/close menu
 	$(".js-menu-open").on("click", function() {
 		$(".js_menu_mobile_open").fadeIn(250);
 		$("body").addClass("modal-open");
@@ -1088,16 +1088,27 @@ $(document).ready(function() {
 			}
 		});
 	});
+	$(".js_modal-advantages-item-open").on("click", function(e) {
+		if (!$(e.target).closest(".js_modal-advantages-item-open-slow").length) {
+			$("body").removeClass("modal-open");
+			$('.js_modal-advantages-item-open').fadeOut("fast");
+			window.scroll(0, window.__prevScroll);
+		}
+	});
+	
 
 
 //scripts open/close dropdown text
+	var setTimeoutOpasity = 0;
 	$("#work_list").on("click", function() {
 		$("#work_list-open").slideToggle(250);
 		$(this).find(".read-other").toggleClass("read-other__svg");
 		function opasity() { 
-			$('#work_list-open').prev().find('.js-last-grad').toggleClass('last-grad')
+			$('#work_list-open').prev().find('.js-last-grad').toggleClass('last-grad');
+			if (setTimeoutOpasity == 0) setTimeoutOpasity = 260;
+			else setTimeoutOpasity = 0;
 		}
-		setTimeout(opasity, 500);
+		setTimeout(opasity, setTimeoutOpasity);
 	});
 
 	$('.js-drop').each(function() {
