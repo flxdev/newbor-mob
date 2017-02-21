@@ -13,21 +13,13 @@ function initYandexMap(){
 	});
 	myMap.controls.add('zoomControl', { top: 10, left: 5 });
 
-	// myMap.behaviors.disable("multiTouch"); 
-	// myMap.behaviors.disable("drag");
-
 	myPlacemark0 = new ymaps.Placemark([mapSetting.markerX,mapSetting.markerY], {
 		balloonContent: "" 
 		}, {
 		iconImageHref: "img/map-marker.png", 
 		iconImageSize: [27, 35], 
 		iconImageOffset: [0, 0]
-		// balloonContentSize: [27, 35], 
-		// balloonLayout: "default#imageWithContent", 
-		// balloonImageHref: "img/map-marker.png", 
-		// balloonImageOffset: [0, 0], 
-		// balloonImageSize: [27, 35], 
-		// balloonShadow: false
+		
 	}); 
 	myMap.geoObjects.add(myPlacemark0);
 }
@@ -290,6 +282,19 @@ $(document).ready(function() {
 	$(l).each(function() {
 		var d = document.getElementById(this.id);
 		lightGallery(d, {controls:true});
+	});
+
+//
+	$("#js-filter-open").on("click", function() {
+		$("#js-filter").fadeIn(250);
+		$('#js-filter-result').fadeOut(250);
+		
+	});
+
+	$("#js-filter-result-open").on("click", function() {
+		$("#js-filter").fadeOut(250);
+		$('#js-filter-result').fadeIn(250);
+		
 	});
 
 
