@@ -901,16 +901,16 @@ function initSlidersUi() {
 			min: sliderSetting.min,
 			max: sliderSetting.max,
 			step: sliderSetting.step,
-			values: [ sliderSetting.defaultValueTo, sliderSetting.defaultValueFrom ],
+			values: [ sliderSetting.defaultValueFrom, sliderSetting.defaultValueTo ],
 			slide: function( event, ui ) {
 				$(sliderSetting.inputHidden).text( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
 				$(sliderSetting.inputHiddenTop).val(ui.values[ 1 ]);
 				$(sliderSetting.inputHiddenBottom).val(ui.values[ 0 ]);
 			}
 		});
-		$(sliderSetting.inputHidden).text( sliderSetting.defaultValueTo + " - " + sliderSetting.defaultValueFrom );
-		$(sliderSetting.inputHiddenTop).val(sliderSetting.defaultValueFrom);
-		$(sliderSetting.inputHiddenBottom).val(sliderSetting.defaultValueTo);
+		$(sliderSetting.inputHidden).text( sliderSetting.defaultValueFrom + " - " + sliderSetting.defaultValueTo );
+		$(sliderSetting.inputHiddenBottom).val(sliderSetting.defaultValueFrom);
+		$(sliderSetting.inputHiddenTop).val(sliderSetting.defaultValueTo);
 	});
 }
 
