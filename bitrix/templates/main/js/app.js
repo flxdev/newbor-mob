@@ -901,16 +901,16 @@ function initSlidersUi() {
 			min: sliderSetting.min,
 			max: sliderSetting.max,
 			step: sliderSetting.step,
-			values: [ sliderSetting.defaultValueFrom, sliderSetting.defaultValueTo ],
+			values: [ sliderSetting.defaultValueTo, sliderSetting.defaultValueFrom ],
 			slide: function( event, ui ) {
 				$(sliderSetting.inputHidden).text( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
 				$(sliderSetting.inputHiddenTop).val(ui.values[ 1 ]);
 				$(sliderSetting.inputHiddenBottom).val(ui.values[ 0 ]);
 			}
 		});
-		$(sliderSetting.inputHidden).text( sliderSetting.defaultValueFrom + " - " + sliderSetting.defaultValueTo );
-		$(sliderSetting.inputHiddenBottom).val(sliderSetting.defaultValueFrom);
-		$(sliderSetting.inputHiddenTop).val(sliderSetting.defaultValueTo);
+		$(sliderSetting.inputHidden).text( sliderSetting.defaultValueTo + " - " + sliderSetting.defaultValueFrom );
+		$(sliderSetting.inputHiddenTop).val(sliderSetting.defaultValueFrom);
+		$(sliderSetting.inputHiddenBottom).val(sliderSetting.defaultValueTo);
 	});
 }
 
@@ -949,9 +949,11 @@ function initSelectUi() {
 }
 
 function initSliderSlick() { 
+
 	$(".slider-init").slick({
 		dots: true,
 		arrows: true,
+		adaptiveHeight: true,
 		prevArrow: "<button type='button' class='slider_arrow slider_arrow-pre'><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 15 27' enable-background='new 0 0 15 27' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M13.8,0L15,1.1L2.7,13.6L15,25.7L13.7,27L0,13.7L13.8,0z'/></svg></button>",
 		nextArrow: "<button type='button' class='slider_arrow slider_arrow-next'><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 15 27' enable-background='new 0 0 15 27' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M15,13.7L1.3,27L0,25.7l12.3-12.1L0,1.1L1.2,0L15,13.7z'/></svg></button>",
 		responsive: [
@@ -970,6 +972,7 @@ function initSliderSlick() {
 		slidesToScroll: 1,
 		arrows: true,
 		dots: false,
+		adaptiveHeight: true,
 		asNavFor: ".slider-init-2_2",
 		prevArrow: "<button type='button' class='slider_arrow slider_arrow-pre'><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 15 27' enable-background='new 0 0 15 27' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M13.8,0L15,1.1L2.7,13.6L15,25.7L13.7,27L0,13.7L13.8,0z'/></svg></button>",
 		nextArrow: "<button type='button' class='slider_arrow slider_arrow-next'><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 15 27' enable-background='new 0 0 15 27' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M15,13.7L1.3,27L0,25.7l12.3-12.1L0,1.1L1.2,0L15,13.7z'/></svg></button>",
@@ -1095,6 +1098,11 @@ $(document).ready(function() {
 	$("#work_list").on("click", function() {
 		$("#work_list-open").slideToggle(250);
 		$(this).find(".read-other").toggleClass("read-other__svg");
+		var text = $(this).find(".read-other__svg");
+		var textEdit = $(this).find(".read-other_green");
+		if (text.length) $(textEdit).text('Скрыть')
+		else $(textEdit).text('Читать подробнее')
+
 		function opasity() { 
 			$('#work_list-open').prev().find('.js-last-grad').toggleClass('last-grad');
 			if (setTimeoutOpasity == 0) setTimeoutOpasity = 260;

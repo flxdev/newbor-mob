@@ -1,3 +1,8 @@
+@media (max-width: 768px) {
+	.btn {
+		font-size: 1.8rem;
+	}
+}
 @media (max-width: 710px) {
 	.title-h3-wrapp {
 		.title-h3 {
@@ -10,6 +15,11 @@
 @media (max-width: 670px) {
 	.wrapp_filters {
 		padding: 30px 20px 60px;
+		.tabs {
+			.btn {
+				min-width: 50px;
+			}
+		}
 		.tabs-content_filters {
 			.tabs-fast, .tabs-deployed	{
 				.tabs-fast_list {
@@ -48,8 +58,11 @@
 		}	
 	}
 	.btn {
-		padding: 20px 50px;
+		padding: 20px 0px;
 		text-align: center;
+	}
+	.btn-green,.btn-white, .btn-opasity {
+		min-width: 280px;
 	}
 	.wrapp-house__ipad {
 		display: none;
@@ -60,7 +73,7 @@
     	border-bottom: 1px solid $grey;
 	}
 	.wrapp-advantages .advantages {
-		flex-basis: 49%;
+		flex-basis: 50%;
 		padding: 30px 0;
 	}
 	.border-right {
@@ -131,10 +144,8 @@
 	}
 	.wrapp-news {
 		padding-bottom: 8px;
-    	// border-bottom: 1px solid $grey;
 	}
 	.about-work {
-		border-top: 1px solid $grey;
 	    margin-top: 0;
 	    padding-top: 40px;
 	}
@@ -286,6 +297,7 @@
 		}
 		.btn {
 			padding: 20px 25px;
+			min-width: 250px;
 		}
 		.tabs-content_filters {
 			.tabs-fast, .tabs-deployed	{

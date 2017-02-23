@@ -118,13 +118,13 @@
 	.slider_arrow-pre {
 		position: absolute;
 		right: 70px;
-		top: 0;
+		top: -20px;
 		z-index: 1;
 	}
 	.slider_arrow-next {
 		position: absolute;
 		right: 20px;
-		top: 0;
+		top: -20px;
 		z-index: 1;
 	}
 	.slick-dots {
@@ -421,10 +421,9 @@
 }
 .footer__menu {
 	background-color: $prime-color;
-	padding: 0px 20px 50px;
+	padding: 0px 20px 130px;
 	overflow: auto;
 	height: 100vh;
-	
 	.links_quarter-drop {
 		display: none;
 	}
