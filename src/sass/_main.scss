@@ -488,6 +488,7 @@
 	justify-content: flex-start;
 	align-items: flex-start;
 	margin: 40px 20px 10px;
+	flex-wrap: wrap;
 	li {
 		padding-right: 3px;
 		a {
@@ -830,6 +831,7 @@
 }
 .success_submit  {
 	display: none;
+	text-align: center;
 }
 .map {
 	div {
@@ -841,4 +843,17 @@
 
 #js-filter-result {
 	display: none;
+}
+
+.tabs {
+	.btn {
+		&:first-child {
+			border-bottom-right-radius: 0;
+   			border-top-right-radius: 0;
+		}
+		&:last-child {
+			border-bottom-left-radius: 0;
+  			border-top-left-radius: 0;
+		}
+	}
 }

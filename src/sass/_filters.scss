@@ -87,6 +87,10 @@ label.checkbox-custom {
 input[type=checkbox]:checked + label.checkbox-custom {
 	background-color: #fff;
 }
+input[type=checkbox]:disabled + label.checkbox-custom {
+	color: #929292;
+}
+
 
 // --------------
 // filter resalts
