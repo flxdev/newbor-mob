@@ -37,7 +37,8 @@ block content
 				a.house(href='#')
 					h4.house-title Дом 6
 					p.house-descript (9.6 по генплану), 19 этажей
-					img(src="img/slide2.jpg" alt="alt")
+					div.wrapp-img-card(style = 'background-image: url("img/slide2.jpg");') 
+						//- img(src="img/slide2.jpg" alt="alt")
 					+a('btn-green btn-uppercase btn-center', 'подобрать по параметрам','#')
 			div.tabs-content.js-tabs-content
 				div.tab-kedr.js_tab_item(data-tab-container="tab1")

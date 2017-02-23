@@ -24,8 +24,8 @@ block content
 			div.lightgallery-custom(id=id_gg)
 				//- Титульная фотка
 				a(href="img/slide2.jpg")
-					img(src="img/slide2.jpg" alt="")
-
+					div.wrapp-img-card(style = 'background-image: url("img/slide2.jpg");') 
+					
 				//- Остальная галерея должна иметь класс .foto_none
 				-for (var i = 0; i < 5; i++){
 					a.foto_none(href="img/test.jpg")

@@ -6,6 +6,7 @@ mixin slider(arrows, dots, slidesToShow, slidesToScroll, allSlides, type)
 		div.slider-init.slider-custom1(data-slick=str)
 			- for (var i = 0; i < allSlides.length; i++) {
 				a(href='#').slide__item
+					// div.wrapp-img-card(style = 'background-image: url("'+ allSlides[i].img + '");') 
 					img(src=allSlides[i].img)
 					h2=	allSlides[i].text
 			-}
@@ -13,7 +14,8 @@ mixin slider(arrows, dots, slidesToShow, slidesToScroll, allSlides, type)
 		div.slider-init.slider-custom2(data-slick=str)
 			- for (var i = 0; i < allSlides.length; i++) {
 				a(href='#').slide__item2
-					img(src=allSlides[i].img)
+					div.wrapp-img-card(style = 'background-image: url("'+ allSlides[i].img + '");') 
+					// img(src=allSlides[i].img)
 					p= allSlides[i].date 
 					h4=	allSlides[i].text
 			-}
@@ -24,14 +26,15 @@ mixin slider(arrows, dots, slidesToShow, slidesToScroll, allSlides, type)
 				a(href='#').slide__item2
 					h4=	allSlides[i].text
 					p= allSlides[i].date 
-					img(src=allSlides[i].img)
+					div.wrapp-img-card(style = 'background-image: url("'+ allSlides[i].img + '");') 
 					+a('btn-green btn-uppercase btn-center', 'подобрать по параметрам','#')
 			-}
 	-if (type == 4) {
 		div.slider-init-2_1.slider-custom2.slider-custom4(data-slick=str)
 			- for (var i = 0; i < allSlides.length; i++) {
 				a(href='#').slide__item4
-					img(src=allSlides[i].img)
+					// img(src=allSlides[i].img)
+					div.wrapp-img-card(style = 'background-image: url("'+ allSlides[i].img + '");') 
 			-}
 		div.slider-init-2_2.slider-custom2.slider-custom4(data-slick=str)
 			- for (var i = 0; i < allSlides.length; i++) {
