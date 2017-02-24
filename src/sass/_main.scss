@@ -459,7 +459,11 @@
 		width: 300px;
 		margin: 0 auto;
 	}
-	
+	.menu-title {
+		.border-bottom {
+			border-bottom: 1px solid #fff;
+		}
+	}
 	.links_quarter,.footer_info,.social_links,.links_all,.menu-title { flex-basis: 100%;}
 	.btn { margin: 0 0 20px; }
 }
@@ -742,6 +746,7 @@
 	
 	.footer__menu {
 		.menu-title {
+
 			form {
 				.btn {
 					margin: 15px auto;
