@@ -1,0 +1,39 @@
+extends _layout
+
+block title
+	title Title of template
+
+block content
+	include includes/_sliders
+	include includes/_btn
+	include includes/_a
+	
+
+	include includes/_header
+	
+	div.wrapp-page
+		nav.title-breadcrumbs
+			ul.breadcrumbs
+				li 
+					a(href='#') Главная
+				li 
+					a(href='#') 404
+		div.wrap-404.__margin-20
+			h1 Ошибка 404
+			p Запрашиваемой страницы не существует!
+			+a('btn-green btn-uppercase', 'На главную','/')
+
+	include includes/_footer
+	include includes/_menu
+	include includes/_modal
+
+
+
+	
+
+
+
+
+
+
+

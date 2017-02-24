@@ -509,6 +509,9 @@
     		margin-right: 10px;
     		color: $grey_dark;
 		}
+		&:last-child:after {
+			content: '';
+		}
 	}
 }
 
@@ -863,5 +866,17 @@
 			border-bottom-left-radius: 0;
   			border-top-left-radius: 0;
 		}
+	}
+}
+
+.wrap-404 {
+	padding: 20px 0 90px;
+	h1 {
+		font-size: 7.5rem;
+		padding-bottom: 30px;
+		line-height: 1;
+	}
+	.btn {
+		margin-top: 50px;
 	}
 }
