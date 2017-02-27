@@ -101,7 +101,7 @@
 		color: #000;
 		p {
 			color: $grey_dark;
-			padding-bottom: 10px;
+			// padding-bottom: 10px;
 		}
 		h4 {
 			font-size: 2.5rem;
@@ -114,7 +114,7 @@
 }
 
 .slider-custom3 {
-	margin: 20px -20px 40px;
+	margin: 35px -20px 40px;
 	.slider_arrow-pre {
 		position: absolute;
 		right: 70px;
@@ -210,6 +210,9 @@
 }
 .tabs-content {
 	margin: 20px;
+	.slider_arrow {
+		display: none !important;
+	}
 }
 
 .wrapp-house {
@@ -227,8 +230,6 @@
 }
 .house  {
 	margin-top: 45px;
-	// width: 48%;
-	// display: inline-block;
 	flex-basis: 48%;
 	display: block;
 	text-decoration: none;
