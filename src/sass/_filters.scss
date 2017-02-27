@@ -89,7 +89,7 @@ input[type=checkbox]:checked + label.checkbox-custom {
 	background-color: #fff;
 }
 input[type=checkbox]:disabled + label.checkbox-custom {
-	color: #929292;
+	color: #a8b430;
 }
 
 
@@ -99,6 +99,10 @@ input[type=checkbox]:disabled + label.checkbox-custom {
 
 .wrapp_resalt {
 	margin-top: 45px;
+	.no-results {
+		text-align: center;
+   		padding: 50px 0;
+	}
 	.header-resalt{
 		display: flex;
 		flex-direction: row;
