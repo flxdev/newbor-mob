@@ -328,8 +328,13 @@
 }
 .how_to_get {
 	margin: 40px 20px;
+	.title {
+		padding-bottom: 20px;
+	}
 	.accordion-item {
-		margin: 20px 0;
+		.slow-drop {
+			padding-bottom: 10px;
+		}
 	}
 	a {
 		font-size: 2.4rem;
@@ -428,9 +433,12 @@
 	width: 46%;
 	max-width: 130px;
 }
+.ios .footer__menu {
+	height: 87vh;
+}
 .footer__menu {
 	background-color: $prime-color;
-	padding: 0px 20px 130px;
+	padding: 0px 20px 100px;
 	overflow: auto;
 	height: 100vh;
 	.links_quarter-drop {
