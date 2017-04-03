@@ -875,7 +875,7 @@ function initYandexMap(){
 	myPlacemark0 = new ymaps.Placemark([mapSetting.markerX,mapSetting.markerY], {
 		balloonContent: "" 
 		}, {
-		iconImageHref: "/local/templates/mobile/img/map-marker.png",
+		iconImageHref: "img/map-marker.png", 
 		iconImageSize: [27, 35], 
 		iconImageOffset: [0, 0]
 		
@@ -906,14 +906,11 @@ function initSlidersUi() {
 				$(sliderSetting.inputHidden).text( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
 				$(sliderSetting.inputHiddenTop).val(ui.values[ 1 ]);
 				$(sliderSetting.inputHiddenBottom).val(ui.values[ 0 ]);
-				if( typeof smartFilter !== 'undefined'){
-					smartFilter.keyup(this);
-				}
 			}
 		});
-		$(sliderSetting.inputHidden).text( sliderSetting.defaultValueFrom + " - " + sliderSetting.defaultValueTo );
-		// $(sliderSetting.inputHiddenBottom).val(sliderSetting.defaultValueFrom);
-		// $(sliderSetting.inputHiddenTop).val(sliderSetting.defaultValueTo);
+		$(sliderSetting.inputHidden).text( sliderSetting.defaultValueTo + " - " + sliderSetting.defaultValueFrom );
+		$(sliderSetting.inputHiddenTop).val(sliderSetting.defaultValueFrom);
+		$(sliderSetting.inputHiddenBottom).val(sliderSetting.defaultValueTo);
 	});
 }
 
@@ -946,22 +943,7 @@ function initSelectUi() {
 			selectAll: false,
 			selectAllText: true,
 			allSelected: false,
-			placeholder: 'Выберите пункт',
-			onClick: function(view) {
-
-				if( typeof smartFilter !== 'undefined'){
-                    var check = $('#'+view.value);
-					if (check.hasClass('checked')) {
-						check.removeClass('checked');
-						check.prop("checked", false);
-					} else {
-						check.prop("checked", true);
-						check.addClass('checked');
-					}
-
-					smartFilter.keyup(check[0]);
-				}
-			}
+			placeholder: 'Выберите пункт'
 		});
 	});
 }
@@ -1182,9 +1164,6 @@ $(document).ready(function() {
 		
 	});
 
-	$(".set_filter").on("click", function() {
-		$("#js-filter").fadeOut(250);
-		$('#js-filter-result').fadeIn(250);
 
-	});
 });
+
