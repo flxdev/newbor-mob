@@ -125,7 +125,10 @@
 		display: none;
 	}
 	.header__text-iphone {
-		display: block;
+		display: flex;
+		flex: 1 0 auto;
+		justify-content: center;
+		// margin: 50px 0;
 	}
 	.header__text-ipad {
 		display: none;

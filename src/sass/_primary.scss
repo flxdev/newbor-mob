@@ -44,12 +44,20 @@ a {text-decoration: none;}
 } 
 .out {
 	width: 100%;
-	min-height: 100vh;    
+	// min-height: 100vh;    
 	display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
     height: 100%;
 }
+.wrapp-index-page, .wrapp-price-page, .wrapp-news-page, .wrapp-news-one-page, .wrapp-loyalty-program-page, .wrapp-foto-gallery-page, .wrapp-filters, .wrapp-filter-resalt-page, .wrapp-filters-resalt-item-page, .wrapp-contacts-page, .wrapp-about-quarter-page {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
 .__margin-20 {
 	margin: 0 20px;
 } 

@@ -18,245 +18,247 @@
         </div>
       </header>
       <p class="h3 header__text-iphone header__text-iphone-border"> <a href="tel:+1234567890">+375 29 000 00 00</a></p>
-      <seciton class="title-filters" id="js-filter">
-        <div class="wrapp_filters">
-          <h3 class="filters-h3" id="js-filter-result-open">Подбор квартиры <span> по параметрам </span> <svg width="133" height="127" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133 127"><path id="svg_5" d="m128.84204,15.68759l-42.4671,0c-2.05127,-8.98129 -10.09009,-15.68954 -19.68121,-15.68954c-9.59116,0 -17.62997,6.70825 -19.68127,15.68954l-42.4671,0c-2.49481,0 -4.54608,2.0513 -4.54608,4.54611s2.05127,4.54608 4.54608,4.54608l42.4671,0c2.0513,8.98129 10.09012,15.68951 19.68127,15.68951c9.59113,0 17.62994,-6.70822 19.68121,-15.68951l42.4671,0c2.49481,0 4.54608,-2.0513 4.54608,-4.54608s-2.05127,-4.54611 -4.54608,-4.54611zm-62.0929,15.68954c-6.15387,0 -11.14346,-4.98959 -11.14346,-11.14343c0,-6.15387 4.98959,-11.14349 11.14346,-11.14349c5.98755,0 10.81079,4.7124 11.08801,10.58905c0,0.16635 -0.05542,0.38812 -0.05542,0.55444c0,0.16632 0.05542,0.38806 0.05542,0.55438c-0.33264,5.87665 -5.15594,10.58905 -11.08801,10.58905z"/><path id="svg_6" d="m128.84204,101.6752l-9.48022,0c-2.05127,-8.98129 -10.09009,-15.68954 -19.68127,-15.68954s-17.62994,6.70825 -19.68121,15.68954l-75.39856,0c-2.49478,0 -4.54608,2.05127 -4.54608,4.54608s2.0513,4.54608 4.54608,4.54608l75.45398,0c2.05133,8.98129 10.09015,15.68954 19.68121,15.68954c9.59119,0 17.63,-6.70825 19.68127,-15.68954l9.48022,0c2.49481,0 4.54614,-2.05127 4.54614,-4.54608c-0.05548,-2.55026 -2.10675,-4.54608 -4.60156,-4.54608zm-29.10608,15.68954c-6.15381,0 -11.14343,-4.98962 -11.14343,-11.14349c0,-6.15384 4.98962,-11.14343 11.14343,-11.14343s11.14349,4.98959 11.14349,11.14343c0,6.09842 -4.98962,11.14349 -11.14349,11.14349z"/><path id="svg_7" d="m128.84204,58.65369l-75.45398,0c-2.05127,-8.98132 -10.09009,-15.68958 -19.68121,-15.68958s-17.62994,6.70825 -19.68124,15.68958l-9.48026,0c-2.49481,0 -4.54608,2.05127 -4.54608,4.54608s2.05127,4.54608 4.54608,4.54608l9.48026,0c2.0513,8.98129 10.09012,15.68954 19.68124,15.68954s17.62994,-6.70825 19.68121,-15.68954l75.45398,0c2.49481,0 4.54608,-2.05127 4.54608,-4.54608s-2.05127,-4.54608 -4.54608,-4.54608zm-95.13519,15.68954c-6.15387,0 -11.14349,-4.98962 -11.14349,-11.14346c0,-6.15387 4.98962,-11.14346 11.14349,-11.14346s11.14346,4.98959 11.14346,11.14346c0,6.15384 -4.98962,11.14346 -11.14346,11.14346z"/></svg></h3>
-          <div class="tabs">
-                  <button class="btn btn-white btn-tab_left js_tab" data-tab="tab1" data-add="btn-white" data-remove="btn-white_white-border">Быстрый</button>
-                  <button class="btn btn-white_white-border btn-tab_right js_tab" data-tab="tab2" data-add="btn-white" data-remove="btn-white_white-border">Развернутый</button>
-          </div>
-          <div class="tabs-content_filters js-tabs-content">
-            <div class="tabs-fast js_tab_item" data-tab-container="tab1">
-              <form>
-                <ul class="tabs-fast_list">
-                  <li class="tabs-fast_list_item js_ui_slider" data-min="0" data-max="1000" data-step="10" data-default-value-to="100" data-default-value-from="500">
-                    <div class="filter-text">
-                      <p class="filter-text_main">Стоимость, тыс $</p>
-                      <p class="filter-text_secondary"><span class="js_ui_slider_input"></span>
-                        <input class="hidden js_ui_slider_value_top">
-                        <input class="hidden js_ui_slider_value_bottom">
-                      </p>
-                    </div>
-                    <div class="filter-value">
-                      <div class="js_ui_slider_main"></div>
-                    </div>
-                  </li>
-                  <li class="tabs-fast_list_item">
-                    <div class="filter-text">
-                      <p class="filter-text_main">Комнаты</p>
-                    </div>
-                    <div class="filter-value filter-value__checkbox">
-                      <input class="checkbox" type="checkbox" id="checkbox_1">
-                      <label class="checkbox-custom" for="checkbox_1">1</label>
-                      <input class="checkbox" type="checkbox" id="checkbox_2">
-                      <label class="checkbox-custom" for="checkbox_2">2</label>
-                      <input class="checkbox" type="checkbox" id="checkbox_3">
-                      <label class="checkbox-custom" for="checkbox_3">3</label>
-                      <input class="checkbox" type="checkbox" id="checkbox_4">
-                      <label class="checkbox-custom" for="checkbox_4">4</label>
-                    </div>
-                  </li>
-                  <li class="tabs-fast_list_item">
-                    <div class="filter-text">
-                      <p class="filter-text_main">Дополнительно</p>
-                    </div>
-                    <div class="filter-value">
-                      <select class="selectUi" name="select" multiple="multiple">
-                        <option>С отделкой</option>
-                        <option>Без отделки</option>
-                      </select>
-                    </div>
-                  </li>
-                </ul>
-                <div class="wrapp-search-btn">
-                        <button class="btn btn-white btn-center btn-uppercase btn-text_dark-green">Найти квартиру</button><a class="js-form-reset"> 
-                    <p class="link_reset">&times; Сбросить все</p></a>
-                </div>
-              </form>
+      <div class="wrapp-filters">
+        <seciton class="title-filters" id="js-filter">
+          <div class="wrapp_filters">
+            <h3 class="filters-h3" id="js-filter-result-open">Подбор квартиры <span> по параметрам </span> <svg width="133" height="127" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133 127"><path id="svg_5" d="m128.84204,15.68759l-42.4671,0c-2.05127,-8.98129 -10.09009,-15.68954 -19.68121,-15.68954c-9.59116,0 -17.62997,6.70825 -19.68127,15.68954l-42.4671,0c-2.49481,0 -4.54608,2.0513 -4.54608,4.54611s2.05127,4.54608 4.54608,4.54608l42.4671,0c2.0513,8.98129 10.09012,15.68951 19.68127,15.68951c9.59113,0 17.62994,-6.70822 19.68121,-15.68951l42.4671,0c2.49481,0 4.54608,-2.0513 4.54608,-4.54608s-2.05127,-4.54611 -4.54608,-4.54611zm-62.0929,15.68954c-6.15387,0 -11.14346,-4.98959 -11.14346,-11.14343c0,-6.15387 4.98959,-11.14349 11.14346,-11.14349c5.98755,0 10.81079,4.7124 11.08801,10.58905c0,0.16635 -0.05542,0.38812 -0.05542,0.55444c0,0.16632 0.05542,0.38806 0.05542,0.55438c-0.33264,5.87665 -5.15594,10.58905 -11.08801,10.58905z"/><path id="svg_6" d="m128.84204,101.6752l-9.48022,0c-2.05127,-8.98129 -10.09009,-15.68954 -19.68127,-15.68954s-17.62994,6.70825 -19.68121,15.68954l-75.39856,0c-2.49478,0 -4.54608,2.05127 -4.54608,4.54608s2.0513,4.54608 4.54608,4.54608l75.45398,0c2.05133,8.98129 10.09015,15.68954 19.68121,15.68954c9.59119,0 17.63,-6.70825 19.68127,-15.68954l9.48022,0c2.49481,0 4.54614,-2.05127 4.54614,-4.54608c-0.05548,-2.55026 -2.10675,-4.54608 -4.60156,-4.54608zm-29.10608,15.68954c-6.15381,0 -11.14343,-4.98962 -11.14343,-11.14349c0,-6.15384 4.98962,-11.14343 11.14343,-11.14343s11.14349,4.98959 11.14349,11.14343c0,6.09842 -4.98962,11.14349 -11.14349,11.14349z"/><path id="svg_7" d="m128.84204,58.65369l-75.45398,0c-2.05127,-8.98132 -10.09009,-15.68958 -19.68121,-15.68958s-17.62994,6.70825 -19.68124,15.68958l-9.48026,0c-2.49481,0 -4.54608,2.05127 -4.54608,4.54608s2.05127,4.54608 4.54608,4.54608l9.48026,0c2.0513,8.98129 10.09012,15.68954 19.68124,15.68954s17.62994,-6.70825 19.68121,-15.68954l75.45398,0c2.49481,0 4.54608,-2.05127 4.54608,-4.54608s-2.05127,-4.54608 -4.54608,-4.54608zm-95.13519,15.68954c-6.15387,0 -11.14349,-4.98962 -11.14349,-11.14346c0,-6.15387 4.98962,-11.14346 11.14349,-11.14346s11.14346,4.98959 11.14346,11.14346c0,6.15384 -4.98962,11.14346 -11.14346,11.14346z"/></svg></h3>
+            <div class="tabs">
+                    <button class="btn btn-white btn-tab_left js_tab" data-tab="tab1" data-add="btn-white" data-remove="btn-white_white-border">Быстрый</button>
+                    <button class="btn btn-white_white-border btn-tab_right js_tab" data-tab="tab2" data-add="btn-white" data-remove="btn-white_white-border">Развернутый</button>
             </div>
-            <div class="tabs-deployed js_tab_item hidden" data-tab-container="tab2">
-              <form>
-                <ul class="tabs-fast_list">
-                  <li class="tabs-fast_list_item js_ui_slider" data-min="0" data-max="1000" data-step="10" data-default-value-to="100" data-default-value-from="500">
-                    <div class="filter-text">
-                      <p class="filter-text_main">Площадь, м <sup>2</sup></p>
-                      <p class="filter-text_secondary"><span class="js_ui_slider_input"></span>
-                        <input class="hidden js_ui_slider_value_top">
-                        <input class="hidden js_ui_slider_value_bottom">
-                      </p>
-                    </div>
-                    <div class="filter-value">
-                      <div class="js_ui_slider_main"></div>
-                    </div>
-                  </li>
-                  <li class="tabs-fast_list_item js_ui_slider" data-min="0" data-max="1000" data-step="10" data-default-value-to="100" data-default-value-from="500">
-                    <div class="filter-text">
-                      <p class="filter-text_main">Жилая площадь, м <sup>2</sup></p>
-                      <p class="filter-text_secondary"><span class="js_ui_slider_input"></span>
-                        <input class="hidden js_ui_slider_value_top">
-                        <input class="hidden js_ui_slider_value_bottom">
-                      </p>
-                    </div>
-                    <div class="filter-value">
-                      <div class="js_ui_slider_main"></div>
-                    </div>
-                  </li>
-                  <li class="tabs-fast_list_item js_ui_slider" data-min="0" data-max="1000" data-step="10" data-default-value-to="100" data-default-value-from="500">
-                    <div class="filter-text">
-                      <p class="filter-text_main">Стоимость, тыс $</p>
-                      <p class="filter-text_secondary"><span class="js_ui_slider_input"></span>
-                        <input class="hidden js_ui_slider_value_top">
-                        <input class="hidden js_ui_slider_value_bottom">
-                      </p>
-                    </div>
-                    <div class="filter-value">
-                      <div class="js_ui_slider_main"></div>
-                    </div>
-                  </li>
-                  <li class="tabs-fast_list_item js_ui_slider" data-min="0" data-max="1000" data-step="10" data-default-value-to="100" data-default-value-from="500">
-                    <div class="filter-text">
-                      <p class="filter-text_main">Цена $/м <sup>2</sup></p>
-                      <p class="filter-text_secondary"><span class="js_ui_slider_input"></span>
-                        <input class="hidden js_ui_slider_value_top">
-                        <input class="hidden js_ui_slider_value_bottom">
-                      </p>
-                    </div>
-                    <div class="filter-value">
-                      <div class="js_ui_slider_main"></div>
-                    </div>
-                  </li>
-                  <li class="tabs-fast_list_item">
-                    <div class="filter-text">
-                      <p class="filter-text_main">Квартал</p>
-                    </div>
-                    <div class="filter-value">
-                      <select class="selectUi" name="select" multiple="multiple">
-                        <option> </option>
-                        <option>Кедровый</option>
-                        <option>Сосновый</option>
-                      </select>
-                    </div>
-                  </li>
-                  <li class="tabs-fast_list_item">
-                    <div class="filter-text">
-                      <p class="filter-text_main">Дом</p>
-                    </div>
-                    <div class="filter-value">
-                      <select class="selectUi" name="select" multiple="multiple">
-                        <option> </option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                      </select>
-                    </div>
-                  </li>
-                  <li class="tabs-fast_list_item">
-                    <div class="filter-text">
-                      <p class="filter-text_main">Подъезд</p>
-                    </div>
-                    <div class="filter-value">
-                      <select class="selectUi" name="select" multiple="multiple">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                      </select>
-                    </div>
-                  </li>
-                  <li class="tabs-fast_list_item">
-                    <div class="filter-text">
-                      <p class="filter-text_main">Комнаты</p>
-                    </div>
-                    <div class="filter-value filter-value__checkbox">
-                      <input class="checkbox" type="checkbox" id="checkbox_5">
-                      <label class="checkbox-custom" for="checkbox_5">1</label>
-                      <input class="checkbox" type="checkbox" id="checkbox_6">
-                      <label class="checkbox-custom" for="checkbox_6">2</label>
-                      <input class="checkbox" type="checkbox" id="checkbox_7">
-                      <label class="checkbox-custom" for="checkbox_7">3</label>
-                      <input class="checkbox" type="checkbox" id="checkbox_8">
-                      <label class="checkbox-custom" for="checkbox_8">4</label>
-                    </div>
-                  </li>
-                  <li class="tabs-fast_list_item">
-                    <div class="filter-text">
-                      <p class="filter-text_main">Дополнительно</p>
-                    </div>
-                    <div class="filter-value">
-                      <select class="selectUi" name="select" multiple="multiple">
-                        <option>Лоджия, отделка, погреб</option>
-                        <option>Лоджия, отделка, погреб</option>
-                        <option>Лоджия, отделка, погреб</option>
-                        <option>Лоджия, отделка, погреб</option>
-                      </select>
-                    </div>
-                  </li>
-                </ul>
-                <div class="wrapp-search-btn">
-                        <button class="btn btn-white btn-center btn-uppercase btn-text_dark-green">Найти квартиру</button><a class="js-form-reset"> 
-                    <p class="link_reset">&times; Сбросить все</p></a>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </seciton>
-      <section id="js-filter-result">
-        <div class="wrapp-filter-resalt-page">
-          <div class="wrapp_resalt __margin-20">
-            <div class="header-resalt">
-              <div class="title-h3-wrapp">
-                <h3 class="title-h3" id="js-filter-open"><a href="#">Параметры <span>квартиры </span> <svg width="133" height="127" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133 127"><path id="svg_5" d="m128.84204,15.68759l-42.4671,0c-2.05127,-8.98129 -10.09009,-15.68954 -19.68121,-15.68954c-9.59116,0 -17.62997,6.70825 -19.68127,15.68954l-42.4671,0c-2.49481,0 -4.54608,2.0513 -4.54608,4.54611s2.05127,4.54608 4.54608,4.54608l42.4671,0c2.0513,8.98129 10.09012,15.68951 19.68127,15.68951c9.59113,0 17.62994,-6.70822 19.68121,-15.68951l42.4671,0c2.49481,0 4.54608,-2.0513 4.54608,-4.54608s-2.05127,-4.54611 -4.54608,-4.54611zm-62.0929,15.68954c-6.15387,0 -11.14346,-4.98959 -11.14346,-11.14343c0,-6.15387 4.98959,-11.14349 11.14346,-11.14349c5.98755,0 10.81079,4.7124 11.08801,10.58905c0,0.16635 -0.05542,0.38812 -0.05542,0.55444c0,0.16632 0.05542,0.38806 0.05542,0.55438c-0.33264,5.87665 -5.15594,10.58905 -11.08801,10.58905z"/><path id="svg_6" d="m128.84204,101.6752l-9.48022,0c-2.05127,-8.98129 -10.09009,-15.68954 -19.68127,-15.68954s-17.62994,6.70825 -19.68121,15.68954l-75.39856,0c-2.49478,0 -4.54608,2.05127 -4.54608,4.54608s2.0513,4.54608 4.54608,4.54608l75.45398,0c2.05133,8.98129 10.09015,15.68954 19.68121,15.68954c9.59119,0 17.63,-6.70825 19.68127,-15.68954l9.48022,0c2.49481,0 4.54614,-2.05127 4.54614,-4.54608c-0.05548,-2.55026 -2.10675,-4.54608 -4.60156,-4.54608zm-29.10608,15.68954c-6.15381,0 -11.14343,-4.98962 -11.14343,-11.14349c0,-6.15384 4.98962,-11.14343 11.14343,-11.14343s11.14349,4.98959 11.14349,11.14343c0,6.09842 -4.98962,11.14349 -11.14349,11.14349z"/><path id="svg_7" d="m128.84204,58.65369l-75.45398,0c-2.05127,-8.98132 -10.09009,-15.68958 -19.68121,-15.68958s-17.62994,6.70825 -19.68124,15.68958l-9.48026,0c-2.49481,0 -4.54608,2.05127 -4.54608,4.54608s2.05127,4.54608 4.54608,4.54608l9.48026,0c2.0513,8.98129 10.09012,15.68954 19.68124,15.68954s17.62994,-6.70825 19.68121,-15.68954l75.45398,0c2.49481,0 4.54608,-2.05127 4.54608,-4.54608s-2.05127,-4.54608 -4.54608,-4.54608zm-95.13519,15.68954c-6.15387,0 -11.14349,-4.98962 -11.14349,-11.14346c0,-6.15387 4.98962,-11.14346 11.14349,-11.14346s11.14346,4.98959 11.14346,11.14346c0,6.15384 -4.98962,11.14346 -11.14346,11.14346z"/></svg></a></h3>
+            <div class="tabs-content_filters js-tabs-content">
+              <div class="tabs-fast js_tab_item" data-tab-container="tab1">
+                <form>
+                  <ul class="tabs-fast_list">
+                    <li class="tabs-fast_list_item js_ui_slider" data-min="0" data-max="1000" data-step="10" data-default-value-to="100" data-default-value-from="500">
+                      <div class="filter-text">
+                        <p class="filter-text_main">Стоимость, тыс $</p>
+                        <p class="filter-text_secondary"><span class="js_ui_slider_input"></span>
+                          <input class="hidden js_ui_slider_value_top">
+                          <input class="hidden js_ui_slider_value_bottom">
+                        </p>
+                      </div>
+                      <div class="filter-value">
+                        <div class="js_ui_slider_main"></div>
+                      </div>
+                    </li>
+                    <li class="tabs-fast_list_item">
+                      <div class="filter-text">
+                        <p class="filter-text_main">Комнаты</p>
+                      </div>
+                      <div class="filter-value filter-value__checkbox">
+                        <input class="checkbox" type="checkbox" id="checkbox_1">
+                        <label class="checkbox-custom" for="checkbox_1">1</label>
+                        <input class="checkbox" type="checkbox" id="checkbox_2">
+                        <label class="checkbox-custom" for="checkbox_2">2</label>
+                        <input class="checkbox" type="checkbox" id="checkbox_3">
+                        <label class="checkbox-custom" for="checkbox_3">3</label>
+                        <input class="checkbox" type="checkbox" id="checkbox_4">
+                        <label class="checkbox-custom" for="checkbox_4">4</label>
+                      </div>
+                    </li>
+                    <li class="tabs-fast_list_item">
+                      <div class="filter-text">
+                        <p class="filter-text_main">Дополнительно</p>
+                      </div>
+                      <div class="filter-value">
+                        <select class="selectUi" name="select" multiple="multiple">
+                          <option>С отделкой</option>
+                          <option>Без отделки</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="wrapp-search-btn">
+                          <button class="btn btn-white btn-center btn-uppercase btn-text_dark-green">Найти квартиру</button><a class="js-form-reset"> 
+                      <p class="link_reset">&times; Сбросить все</p></a>
+                  </div>
+                </form>
               </div>
-              <div class="group_chechbox">
-                <input type="checkbox" id="group">
-                <label class="checkbox-custom__check" for="group"> 
-                  <p>Групировать по планировкам</p>
-                </label>
+              <div class="tabs-deployed js_tab_item hidden" data-tab-container="tab2">
+                <form>
+                  <ul class="tabs-fast_list">
+                    <li class="tabs-fast_list_item js_ui_slider" data-min="0" data-max="1000" data-step="10" data-default-value-to="100" data-default-value-from="500">
+                      <div class="filter-text">
+                        <p class="filter-text_main">Площадь, м <sup>2</sup></p>
+                        <p class="filter-text_secondary"><span class="js_ui_slider_input"></span>
+                          <input class="hidden js_ui_slider_value_top">
+                          <input class="hidden js_ui_slider_value_bottom">
+                        </p>
+                      </div>
+                      <div class="filter-value">
+                        <div class="js_ui_slider_main"></div>
+                      </div>
+                    </li>
+                    <li class="tabs-fast_list_item js_ui_slider" data-min="0" data-max="1000" data-step="10" data-default-value-to="100" data-default-value-from="500">
+                      <div class="filter-text">
+                        <p class="filter-text_main">Жилая площадь, м <sup>2</sup></p>
+                        <p class="filter-text_secondary"><span class="js_ui_slider_input"></span>
+                          <input class="hidden js_ui_slider_value_top">
+                          <input class="hidden js_ui_slider_value_bottom">
+                        </p>
+                      </div>
+                      <div class="filter-value">
+                        <div class="js_ui_slider_main"></div>
+                      </div>
+                    </li>
+                    <li class="tabs-fast_list_item js_ui_slider" data-min="0" data-max="1000" data-step="10" data-default-value-to="100" data-default-value-from="500">
+                      <div class="filter-text">
+                        <p class="filter-text_main">Стоимость, тыс $</p>
+                        <p class="filter-text_secondary"><span class="js_ui_slider_input"></span>
+                          <input class="hidden js_ui_slider_value_top">
+                          <input class="hidden js_ui_slider_value_bottom">
+                        </p>
+                      </div>
+                      <div class="filter-value">
+                        <div class="js_ui_slider_main"></div>
+                      </div>
+                    </li>
+                    <li class="tabs-fast_list_item js_ui_slider" data-min="0" data-max="1000" data-step="10" data-default-value-to="100" data-default-value-from="500">
+                      <div class="filter-text">
+                        <p class="filter-text_main">Цена $/м <sup>2</sup></p>
+                        <p class="filter-text_secondary"><span class="js_ui_slider_input"></span>
+                          <input class="hidden js_ui_slider_value_top">
+                          <input class="hidden js_ui_slider_value_bottom">
+                        </p>
+                      </div>
+                      <div class="filter-value">
+                        <div class="js_ui_slider_main"></div>
+                      </div>
+                    </li>
+                    <li class="tabs-fast_list_item">
+                      <div class="filter-text">
+                        <p class="filter-text_main">Квартал</p>
+                      </div>
+                      <div class="filter-value">
+                        <select class="selectUi" name="select" multiple="multiple">
+                          <option> </option>
+                          <option>Кедровый</option>
+                          <option>Сосновый</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li class="tabs-fast_list_item">
+                      <div class="filter-text">
+                        <p class="filter-text_main">Дом</p>
+                      </div>
+                      <div class="filter-value">
+                        <select class="selectUi" name="select" multiple="multiple">
+                          <option> </option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li class="tabs-fast_list_item">
+                      <div class="filter-text">
+                        <p class="filter-text_main">Подъезд</p>
+                      </div>
+                      <div class="filter-value">
+                        <select class="selectUi" name="select" multiple="multiple">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li class="tabs-fast_list_item">
+                      <div class="filter-text">
+                        <p class="filter-text_main">Комнаты</p>
+                      </div>
+                      <div class="filter-value filter-value__checkbox">
+                        <input class="checkbox" type="checkbox" id="checkbox_5">
+                        <label class="checkbox-custom" for="checkbox_5">1</label>
+                        <input class="checkbox" type="checkbox" id="checkbox_6">
+                        <label class="checkbox-custom" for="checkbox_6">2</label>
+                        <input class="checkbox" type="checkbox" id="checkbox_7">
+                        <label class="checkbox-custom" for="checkbox_7">3</label>
+                        <input class="checkbox" type="checkbox" id="checkbox_8">
+                        <label class="checkbox-custom" for="checkbox_8">4</label>
+                      </div>
+                    </li>
+                    <li class="tabs-fast_list_item">
+                      <div class="filter-text">
+                        <p class="filter-text_main">Дополнительно</p>
+                      </div>
+                      <div class="filter-value">
+                        <select class="selectUi" name="select" multiple="multiple">
+                          <option>Лоджия, отделка, погреб</option>
+                          <option>Лоджия, отделка, погреб</option>
+                          <option>Лоджия, отделка, погреб</option>
+                          <option>Лоджия, отделка, погреб</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="wrapp-search-btn">
+                          <button class="btn btn-white btn-center btn-uppercase btn-text_dark-green">Найти квартиру</button><a class="js-form-reset"> 
+                      <p class="link_reset">&times; Сбросить все</p></a>
+                  </div>
+                </form>
               </div>
             </div>
-            <div class="body-resalt">
-              <ul class="list-items-resalts">
-                <li class="item-resalts"><a href="#">
-                    <div class="wrapp-img"><img src="img/resault.jpg" alt=""></div>
-                    <div class="info-item-resalt">
-                      <div>
-                        <h4>1-комната, 44,92 м <sup>2</sup></h4>
-                        <p>Кедровый квартал, 4 (19-этажный) дом, 1 под., 9 этаж, Лоджия</p>
-                      </div>
-                      <h4 class="price">80 600 USD</h4>
-                    </div></a></li>
-                <li class="item-resalts"><a href="#">
-                    <div class="wrapp-img"><img src="img/resault.jpg" alt=""></div>
-                    <div class="info-item-resalt">
-                      <div>
-                        <h4>1-комната, 44,92 м <sup>2</sup></h4>
-                        <p>Кедровый квартал, 4 (19-этажный) дом, 1 под., 9 этаж, Лоджия</p>
-                      </div>
-                      <h4 class="price">80 600 USD</h4>
-                    </div></a></li>
-                <li class="item-resalts"><a href="#">
-                    <div class="wrapp-img"><img src="img/resault.jpg" alt=""></div>
-                    <div class="info-item-resalt">
-                      <div>
-                        <h4>1-комната, 44,92 м <sup>2</sup></h4>
-                        <p>Кедровый квартал, 4 (19-этажный) дом, 1 под., 9 этаж, Лоджия</p>
-                      </div>
-                      <h4 class="price">80 600 USD</h4>
-                    </div></a></li>
-                <li class="item-resalts"><a href="#">
-                    <div class="wrapp-img"><img src="img/resault.jpg" alt=""></div>
-                    <div class="info-item-resalt">
-                      <div>
-                        <h4>1-комната, 44,92 м <sup>2</sup></h4>
-                        <p>Кедровый квартал, 4 (19-этажный) дом, 1 под., 9 этаж, Лоджия</p>
-                      </div>
-                      <h4 class="price">80 600 USD</h4>
-                    </div></a></li>
-              </ul>
+          </div>
+        </seciton>
+        <section id="js-filter-result">
+          <div class="wrapp-filter-resalt-page">
+            <div class="wrapp_resalt __margin-20">
+              <div class="header-resalt">
+                <div class="title-h3-wrapp">
+                  <h3 class="title-h3" id="js-filter-open"><a href="#">Параметры <span>квартиры </span> <svg width="133" height="127" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133 127"><path id="svg_5" d="m128.84204,15.68759l-42.4671,0c-2.05127,-8.98129 -10.09009,-15.68954 -19.68121,-15.68954c-9.59116,0 -17.62997,6.70825 -19.68127,15.68954l-42.4671,0c-2.49481,0 -4.54608,2.0513 -4.54608,4.54611s2.05127,4.54608 4.54608,4.54608l42.4671,0c2.0513,8.98129 10.09012,15.68951 19.68127,15.68951c9.59113,0 17.62994,-6.70822 19.68121,-15.68951l42.4671,0c2.49481,0 4.54608,-2.0513 4.54608,-4.54608s-2.05127,-4.54611 -4.54608,-4.54611zm-62.0929,15.68954c-6.15387,0 -11.14346,-4.98959 -11.14346,-11.14343c0,-6.15387 4.98959,-11.14349 11.14346,-11.14349c5.98755,0 10.81079,4.7124 11.08801,10.58905c0,0.16635 -0.05542,0.38812 -0.05542,0.55444c0,0.16632 0.05542,0.38806 0.05542,0.55438c-0.33264,5.87665 -5.15594,10.58905 -11.08801,10.58905z"/><path id="svg_6" d="m128.84204,101.6752l-9.48022,0c-2.05127,-8.98129 -10.09009,-15.68954 -19.68127,-15.68954s-17.62994,6.70825 -19.68121,15.68954l-75.39856,0c-2.49478,0 -4.54608,2.05127 -4.54608,4.54608s2.0513,4.54608 4.54608,4.54608l75.45398,0c2.05133,8.98129 10.09015,15.68954 19.68121,15.68954c9.59119,0 17.63,-6.70825 19.68127,-15.68954l9.48022,0c2.49481,0 4.54614,-2.05127 4.54614,-4.54608c-0.05548,-2.55026 -2.10675,-4.54608 -4.60156,-4.54608zm-29.10608,15.68954c-6.15381,0 -11.14343,-4.98962 -11.14343,-11.14349c0,-6.15384 4.98962,-11.14343 11.14343,-11.14343s11.14349,4.98959 11.14349,11.14343c0,6.09842 -4.98962,11.14349 -11.14349,11.14349z"/><path id="svg_7" d="m128.84204,58.65369l-75.45398,0c-2.05127,-8.98132 -10.09009,-15.68958 -19.68121,-15.68958s-17.62994,6.70825 -19.68124,15.68958l-9.48026,0c-2.49481,0 -4.54608,2.05127 -4.54608,4.54608s2.05127,4.54608 4.54608,4.54608l9.48026,0c2.0513,8.98129 10.09012,15.68954 19.68124,15.68954s17.62994,-6.70825 19.68121,-15.68954l75.45398,0c2.49481,0 4.54608,-2.05127 4.54608,-4.54608s-2.05127,-4.54608 -4.54608,-4.54608zm-95.13519,15.68954c-6.15387,0 -11.14349,-4.98962 -11.14349,-11.14346c0,-6.15387 4.98962,-11.14346 11.14349,-11.14346s11.14346,4.98959 11.14346,11.14346c0,6.15384 -4.98962,11.14346 -11.14346,11.14346z"/></svg></a></h3>
+                </div>
+                <div class="group_chechbox">
+                  <input type="checkbox" id="group">
+                  <label class="checkbox-custom__check" for="group"> 
+                    <p>Групировать по планировкам</p>
+                  </label>
+                </div>
+              </div>
+              <div class="body-resalt">
+                <ul class="list-items-resalts">
+                  <li class="item-resalts"><a href="#">
+                      <div class="wrapp-img"><img src="img/resault.jpg" alt=""></div>
+                      <div class="info-item-resalt">
+                        <div>
+                          <h4>1-комната, 44,92 м <sup>2</sup></h4>
+                          <p>Кедровый квартал, 4 (19-этажный) дом, 1 под., 9 этаж, Лоджия</p>
+                        </div>
+                        <h4 class="price">80 600 USD</h4>
+                      </div></a></li>
+                  <li class="item-resalts"><a href="#">
+                      <div class="wrapp-img"><img src="img/resault.jpg" alt=""></div>
+                      <div class="info-item-resalt">
+                        <div>
+                          <h4>1-комната, 44,92 м <sup>2</sup></h4>
+                          <p>Кедровый квартал, 4 (19-этажный) дом, 1 под., 9 этаж, Лоджия</p>
+                        </div>
+                        <h4 class="price">80 600 USD</h4>
+                      </div></a></li>
+                  <li class="item-resalts"><a href="#">
+                      <div class="wrapp-img"><img src="img/resault.jpg" alt=""></div>
+                      <div class="info-item-resalt">
+                        <div>
+                          <h4>1-комната, 44,92 м <sup>2</sup></h4>
+                          <p>Кедровый квартал, 4 (19-этажный) дом, 1 под., 9 этаж, Лоджия</p>
+                        </div>
+                        <h4 class="price">80 600 USD</h4>
+                      </div></a></li>
+                  <li class="item-resalts"><a href="#">
+                      <div class="wrapp-img"><img src="img/resault.jpg" alt=""></div>
+                      <div class="info-item-resalt">
+                        <div>
+                          <h4>1-комната, 44,92 м <sup>2</sup></h4>
+                          <p>Кедровый квартал, 4 (19-этажный) дом, 1 под., 9 этаж, Лоджия</p>
+                        </div>
+                        <h4 class="price">80 600 USD</h4>
+                      </div></a></li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <footer>
         <div class="footer footer__footer">
           <div class="wrapp-menu_footer">
