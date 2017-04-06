@@ -123,6 +123,7 @@ function initSliderSlick() {
 		slidesToScroll: 1,
 		asNavFor: ".slider-init-2_1",
 		dots: false,
+		adaptiveHeight: true,
 		arrows: false,
 		focusOnSelect: true,
 		fade: true,
