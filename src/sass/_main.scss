@@ -416,6 +416,7 @@
 .wrapp-menu-logo {
 	min-height: 120px;
 	width: 100%;
+	text-align: left;
 	p {
 		svg {
 			width: 30px;
@@ -443,6 +444,9 @@
 	padding: 0px 20px 100px;
 	// overflow: auto;
 	// height: 100vh;
+	text-align: center;
+    display: inline-block;
+    width: 100%;
 	.links_quarter-drop {
 		display: none;
 	}
@@ -901,3 +905,4 @@
 		margin-top: 50px;
 	}
 }
+
