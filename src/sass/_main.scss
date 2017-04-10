@@ -436,13 +436,13 @@
 	max-width: 130px;
 }
 .ios .footer__menu {
-	height: 87vh;
+	// height: 87vh;
 }
 .footer__menu {
 	background-color: $prime-color;
 	padding: 0px 20px 100px;
-	overflow: auto;
-	height: 100vh;
+	// overflow: auto;
+	// height: 100vh;
 	.links_quarter-drop {
 		display: none;
 	}
@@ -834,14 +834,14 @@
 }
 
 .menu_mobile {
-	position: fixed;
+	position: absolute;
 	z-index: 100;
 	width: 100%;
-	min-height: 100vh;
+	height: 100%;
 	background-color: $prime-color;
 	top: 0;
 	left: 0;
-	overflow: hidden;
+	overflow: auto;
 	display: none;
 }
 .menu_mobile-close { display: block; }
